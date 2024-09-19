@@ -22,6 +22,7 @@ const config = {
         dark: {
           primary: "#161616",
           secondary: "#0F0F0F",
+          secondary_two: "#1C1C1C",
           text_primary: "#757575",
           text_secondary: "#CACACA",
         },

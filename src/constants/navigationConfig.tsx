@@ -18,7 +18,7 @@ export interface Navigation {
 export const navigationMenus: Navigation[] = [
   {
     title: "Explore",
-    path: "",
+    path: "/",
     icon: <MdOutlineExplore />,
   },
   {
@@ -28,7 +28,7 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Articles",
-    path: "",
+    path: "/articles/",
     icon: <FaPen />,
   },
   {
