@@ -17,8 +17,8 @@ const Home = () => {
             students learn CS topics in an interactive way.
           </h3>
         </div>
+        <FeaturedWork />
       </div>
-      <FeaturedWork />
     </div>
   );
 };
