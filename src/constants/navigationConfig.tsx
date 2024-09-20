@@ -23,7 +23,7 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Work",
-    path: "",
+    path: "/",
     icon: <BsSendArrowUp />,
   },
   {
@@ -32,33 +32,38 @@ export const navigationMenus: Navigation[] = [
     icon: <FaPen />,
   },
   {
+    title: "Content",
+    path: "/",
+    icon: <FaPen />,
+  },
+  {
     title: "Stack",
-    path: "",
+    path: "/",
     icon: <TiSpanner />,
   },
   {
     title: "Resume",
-    path: "",
+    path: "/",
     icon: <GrDocumentOutlook />,
   },
   {
     title: "Book a Call",
-    path: "",
+    path: "/",
     icon: <IoPersonCircleOutline />,
   },
   {
     title: "Linkedin",
-    path: "",
+    path: "/",
     icon: <CiLinkedin />,
   },
   {
     title: "Instagram",
-    path: "",
+    path: "/",
     icon: <FaInstagram />,
   },
   {
     title: "Medium",
-    path: "",
+    path: "/",
     icon: <FaMedium />,
   },
 ];
