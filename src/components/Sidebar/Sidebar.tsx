@@ -8,7 +8,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar flex flex-col gap-2 w-full h-full px-2 py-6">
       <ProfileTag />
-      {navigationMenus.map((menu, index) => {
+      {navigationMenus?.map((menu, index) => {
         if (index === 4) {
           return (
             <p

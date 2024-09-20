@@ -15,13 +15,20 @@ const SidebarItem = ({
   itemNumber,
 }: SidebarItemProps) => {
   return (
-    <Link href={menu.path}>
+    <Link href={menu?.path ? menu.path : "/"}>
       <div
-        className={`w-full sidebar-item  cursor-pointer transition-all border-[0.5px] rounded-md flex gap-2 items-center px-4 py-2 text-md text-[#929292] hover:text-white ${
+        style={
           isFocused
-            ? "bg-[#2B2B2B] text-white border-[#393939]"
-            : "border-dark-secondary"
-        }`}
+            ? {
+                backgroundColor: "#2B2B2B",
+                color: "white",
+                borderColor: "#393939",
+              }
+            : {
+                borderColor: "#0F0F0F",
+              }
+        }
+        className={`w-full sidebar-item  cursor-pointer transition-all border-[0.5px] rounded-md flex gap-2 items-center px-4 py-2 text-md text-[#929292] hover:text-white `}
         onClick={() => setActiveItem(itemNumber)}
       >
         {menu.icon}
