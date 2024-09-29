@@ -7,7 +7,7 @@ const Sidebar = () => {
   const [activeItem, setActiveItem] = useState(0);
   return (
     <div className="sidebar flex flex-col gap-2 w-full h-full px-2 py-6">
-      <ProfileTag />
+      {/* <ProfileTag /> */}
       {navigationMenus?.map((menu, index) => {
         if (index === 4) {
           return (

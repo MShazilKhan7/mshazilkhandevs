@@ -58,7 +58,7 @@ export default function RootLayout({
                 sidebarOpen ? "hidden" : ""
               } top-bar items-center w-full pr-6 h-[100px] bg-[#161616] flex justify-between lg:hidden`}
             >
-              <ProfileTag />
+              {/* <ProfileTag /> */}
               <GiHamburgerMenu
                 className="text-white"
                 onClick={ToggleSidebar}
