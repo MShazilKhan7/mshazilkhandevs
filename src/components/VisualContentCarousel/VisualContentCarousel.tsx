@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 interface VisualContentCarouselProps {
-  visuals: { path: string }[]; // Assuming visuals is an array of objects with 'path'
+  visuals: string[]; // Assuming visuals is an array of objects with 'path'
 }
 
 const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
@@ -29,7 +29,7 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
   }, [counter]);
 
   return (
-    <div className="carousel max-w-full h-[74vh] ">
+    <div className="carousel max-w-full md:h-[74vh] ">
       <div className="carousel-images w-full h-full overflow-hidden flex  rounded-md">
         {visuals.map((slide, index) => (
           <div
@@ -37,7 +37,7 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
             className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out"
           >
             <img
-              src={slide.path}
+              src={slide}
               className="w-full h-full object-contain rounded-md"
               alt={`Slide ${index + 1}`}
             />

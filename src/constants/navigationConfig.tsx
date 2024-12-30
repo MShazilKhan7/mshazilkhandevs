@@ -8,6 +8,7 @@ import { RiLinkedinLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
 import { FaMedium } from "react-icons/fa6";
 import { FaPen } from "react-icons/fa6";
+import { SiDocsdotrs } from "react-icons/si";
 
 export interface Navigation {
   title: string;
@@ -33,8 +34,8 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Content",
-    path: "/",
-    icon: <FaPen />,
+    path: "content/",
+    icon: <SiDocsdotrs />,
   },
   {
     title: "Stack",

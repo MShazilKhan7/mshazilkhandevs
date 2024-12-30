@@ -2,7 +2,7 @@ import React from "react";
 import AnimatedTitles from "../AnimatedTitles/AnimatedTitles";
 const ProfileTag = () => {
   return (
-    <div className="flex gap-3 w-[250px] px-4 py-2 items-center">
+    <div className="flex gap-3 px-2 py-2 items-center">
       <div className="avatar rounded-full w-[40px] h-[40px] bg-black">
         <img
           src="my_profile.jpg"

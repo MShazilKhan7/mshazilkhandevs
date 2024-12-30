@@ -28,7 +28,7 @@ const SidebarItem = ({
                 borderColor: "#0F0F0F",
               }
         }
-        className={`w-full sidebar-item  cursor-pointer transition-all border-[0.5px] rounded-md flex gap-2 items-center px-4 py-2 text-md text-[#929292] hover:text-white `}
+        className={`sidebar-item cursor-pointer transition-all border-[0.5px] rounded-md flex gap-2 items-center px-4 py-2 text-md text-[#929292] hover:text-white `}
         onClick={() => setActiveItem(itemNumber)}
       >
         {menu.icon}
