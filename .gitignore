@@ -33,3 +33,58 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Node.js related
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build and output directories
+dist/
+.build/
+out/
+
+# Logs
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
+
+# Sanity specific
+.sanity/
+.sanity-temp/
+sanity-studio/.env
+sanity-studio/.env.local
+sanity-studio/.sanity/
+sanity-studio/dist/
+
+# Next.js (if using it for the blog)
+.next/
+.vercel/
+*.next.cache/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+.vscode/
+.idea/
+
+# Miscellaneous
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Optional: Exclude sensitive files if included in repo
+sanity.json
+studio-config.json

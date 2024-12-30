@@ -14,49 +14,13 @@ import VisualContentCarousel from "../VisualContentCarousel/VisualContentCarouse
 interface VisualContentDialogProps {
   open: boolean;
   onOpenChange: () => void;
+  slides: string[];
 }
-type Visuals = {
-  path: string;
-};
 
-const images: Visuals[] = [
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/visual_01.png",
-  },
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/sampleone.png",
-  },
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/sample.png",
-  },
-  {
-    path: "/sample.png",
-  },
-];
 const VisualContentDialog = ({
   open,
   onOpenChange,
+  slides,
 }: VisualContentDialogProps) => {
   return (
     <div className="w-full">
@@ -66,7 +30,7 @@ const VisualContentDialog = ({
             width: "70%",
           }}
         >
-          <VisualContentCarousel visuals={images} />
+          <VisualContentCarousel visuals={slides} />
         </DialogContent>
       </Dialog>
     </div>

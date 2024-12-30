@@ -18,7 +18,6 @@ const AnimatedTitles = () => {
       }}
       className="text-dark-text_secondary text-sm"
       onUpdate={(latest) => {
-        console.log("latest", latest);
         if (latest.y === -10) {
           setCounter((prevCounter) => prevCounter + 1);
         }
