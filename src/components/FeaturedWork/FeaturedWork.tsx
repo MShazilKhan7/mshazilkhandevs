@@ -12,7 +12,7 @@ const FeaturedWork = () => {
         <FeaturedWorkCard />
         <FeaturedWorkCard />
       </div>
-      <DisplayCard />
+      {/* <DisplayCard /> */}
     </div>
   );
 };
