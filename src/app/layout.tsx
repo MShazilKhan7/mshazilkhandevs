@@ -42,7 +42,7 @@ export default function RootLayout({
         <div className="root-layout main-container overflow-hidden flex w-full bg-dark-primary">
           <div
             ref={sidebarRef}
-            className={`h-screen absolute -translate-x-full lg:translate-x-0 z-10 transition-all ease-in-out duration-300  lg:left-0 lg:static lg:w-[240px] bg-dark-secondary ${
+            className={`h-screen absolute w-[240px] -translate-x-full lg:translate-x-0 z-10 transition-all ease-in-out duration-300  lg:left-0 lg:static lg:w-[240px] bg-dark-secondary ${
               sidebarOpen ? "translate-x-0" : "-translate-x-full"
             }`}
           >
@@ -58,7 +58,7 @@ export default function RootLayout({
                 sidebarOpen ? "hidden" : ""
               } top-bar items-center w-full pr-6 h-[100px] bg-[#161616] flex justify-between lg:hidden`}
             >
-              {/* <ProfileTag /> */}
+              <ProfileTag />
               <GiHamburgerMenu
                 className="text-white"
                 onClick={ToggleSidebar}
