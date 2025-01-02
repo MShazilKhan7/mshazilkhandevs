@@ -14,7 +14,7 @@ import VisualContentCarousel from "../VisualContentCarousel/VisualContentCarouse
 interface VisualContentDialogProps {
   open: boolean;
   onOpenChange: () => void;
-  slides: string[];
+  slides: any[];
 }
 
 const VisualContentDialog = ({

@@ -6,18 +6,16 @@ import Pill from "../Pills/Pill";
 import { BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
 import { IoIosLink } from "react-icons/io";
-import { ContentCardDetails } from "@/constants/VisualContent/visualContentConfig";
-interface ContentCardProps {
+import { ContentCardDetails } from "@/types/interfaces";
+import Image from "next/image";
+import { urlFor } from "@/sanity/utils/sanity-utils";
+interface ContentCardProps extends ContentCardDetails {
   onOpenChange: () => void;
-  ContentCardDetails: ContentCardDetails;
 }
 
-const ContentCard = ({
-  onOpenChange,
-  ContentCardDetails,
-}: ContentCardProps) => {
+const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
   const [visible, setVisible] = useState(false);
-  const { title, thumbnailUrl, buttonText, hashtags } = ContentCardDetails;
+  const { title, thumbnail, tags } = post;
   return (
     <>
       <div
@@ -37,7 +35,7 @@ const ContentCard = ({
               visible ? "md:visible" : "md:invisible"
             }`}
           >
-            <RdButton text={buttonText} />
+            <RdButton text={buttonText || ""} />
             <IoMdMore
               size={28}
               className="cursor-pointer rounded-lg text-[#A8B3CF] hover:text-white hover:bg-[#383D47]"
@@ -52,16 +50,23 @@ const ContentCard = ({
               </h3>
             </div>
             <div className="hashtags py-1">
-              <Pill variant="simple" text="#computer-science" />
+              {tags?.map(({ title }, index) => (
+                <Pill key={index} variant="simple" text={title} />
+              ))}
             </div>
             <div className="read-time">
               <h3 className="text-sm text-[#A8B3CF]">Aug 22. 3m read time</h3>
             </div>
           </div>
-          <div className="center-image w-full sm:w-[270px] md:w-full h-[160px] rounded-md  mt-2">
-            <img
-              className="w-full h-full object-cover rounded-md"
-              src={thumbnailUrl}
+          <div className="center-image w-full sm:w-[270px] md:w-full h-[160px] rounded-md mt-2">
+            <Image
+              alt={thumbnail?.alt || "Image"}
+              loading="lazy"
+              width={270}
+              height={160}
+              className="w-full h-[160px] sm:w-[270px] md:w-full rounded-md"
+              src={`${urlFor(thumbnail.asset._ref)}`}
+              objectFit="contain"
             />
           </div>
         </div>

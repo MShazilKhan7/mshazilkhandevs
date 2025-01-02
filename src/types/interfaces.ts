@@ -91,3 +91,16 @@ export interface iNavSocials {
   link: string;
   icon: any;
 }
+
+export interface ContentCardDetails {
+  buttonText?: string;
+  post: ContentPost;
+}
+
+export interface ContentPost {
+  title: string;
+  slug: string;
+  tags: Tag[];
+  thumbnail: any;
+  images: any[];
+}

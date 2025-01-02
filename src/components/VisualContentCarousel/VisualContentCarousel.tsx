@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
-
+import Image from "next/image";
+import { urlFor } from "@/sanity/utils/sanity-utils";
 interface VisualContentCarouselProps {
-  visuals: string[]; // Assuming visuals is an array of objects with 'path'
+  visuals: any[]; // Assuming visuals is an array of objects with 'path'
 }
 
 const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
@@ -31,18 +32,26 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
   return (
     <div className="carousel max-w-full md:h-[74vh] ">
       <div className="carousel-images w-full h-full overflow-hidden flex  rounded-md">
-        {visuals.map((slide, index) => (
-          <div
-            key={index}
-            className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out"
-          >
-            <img
-              src={slide}
-              className="w-full h-full object-contain rounded-md"
-              alt={`Slide ${index + 1}`}
-            />
-          </div>
-        ))}
+        {visuals?.map((slide, index) => {
+          const {
+            alt,
+            asset: { _ref = "" },
+            dimensions: { width, height },
+          } = slide;
+          return (
+            <div className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
+              <Image
+                key={index}
+                alt={alt || "Image"}
+                loading="lazy"
+                src={`${urlFor(_ref)}`}
+                height={height}
+                width={width}
+                objectFit="contain"
+              />
+            </div>
+          );
+        })}
       </div>
 
       {/* Navigation buttons outside of the slides */}
