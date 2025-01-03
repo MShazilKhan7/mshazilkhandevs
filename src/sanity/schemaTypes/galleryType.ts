@@ -1,0 +1,72 @@
+import { defineType, defineField } from "sanity";
+
+export const galleryType = defineType({
+  name: "gallery",
+  type: "document",
+  title: "Content Gallery",
+  fields: [
+    defineField({
+      name: "title",
+      title: "Title",
+      type: "string",
+    }),
+    defineField({
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+        maxLength: 96,
+      },
+    }),
+    defineField({
+      name: "thumbnail",
+      title: "thumbnail image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+      ],
+    }),
+    defineField({
+      name: "images",
+      type: "array",
+      title: "Images",
+      of: [
+        {
+          name: "image",
+          type: "image",
+          title: "Image",
+          options: {
+            hotspot: true,
+          },
+          fields: [
+            {
+              name: "alt",
+              type: "string",
+              title: "Alternative text",
+            },
+          ],
+        },
+      ],
+    }),
+    defineField({
+      name: "tags",
+      title: "Tags",
+      type: "array",
+      of: [{ type: "reference", to: { type: "tags" } }],
+    }),
+    {
+      name: "zoom",
+      type: "boolean",
+      title: "Zoom enabled",
+      description: "Should we enable zooming of images?",
+    },
+  ],
+});

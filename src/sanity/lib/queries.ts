@@ -444,3 +444,17 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
     "mainImageWidth": mainImage.asset->metadata.dimensions.width,
       "mainImageHeight": mainImage.asset->metadata.dimensions.height
   }`;
+
+export const contentPosts = groq`*[_type == "gallery"]{
+    _createdAt,
+    _updatedAt,
+    publishedAt,
+    title,
+    slug,
+    thumbnail,
+    "tags": tags[]-> {title, slug},
+    images[]{
+      ...,
+      "dimensions": asset->metadata.dimensions
+    }
+  }`;

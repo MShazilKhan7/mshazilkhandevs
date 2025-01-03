@@ -8,7 +8,7 @@ interface ArticleDetailsProps {
 
 function ArticleDetails({ article }: ArticleDetailsProps) {
   return (
-    <section className="article-details flex flex-col items-center">
+    <section className="article-details w-full flex flex-col items-center">
       <div className="article-header">
         <ArticleHeader post={article} />
       </div>

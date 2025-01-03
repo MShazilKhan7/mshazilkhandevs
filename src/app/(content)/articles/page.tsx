@@ -3,7 +3,7 @@ import React from "react";
 import { fetchDataFromSanity } from "@/lib/fetch";
 import { postsQuery } from "@/sanity/lib/queries";
 
-const page = async () => {
+const Articles = async () => {
   const articles = await fetchDataFromSanity({ query: postsQuery });
 
   console.log("hellow");
@@ -14,4 +14,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Articles;

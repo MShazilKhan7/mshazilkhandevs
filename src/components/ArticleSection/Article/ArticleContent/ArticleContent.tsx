@@ -1,5 +1,6 @@
 import React from "react";
 import { PortableText } from "@portabletext/react";
+import articePortableText from "./PortableComponent";
 
 interface ArticleContentProps {
   content: any;
@@ -7,7 +8,7 @@ interface ArticleContentProps {
 function ArticleContent({ content }: ArticleContentProps) {
   return (
     <div className="article-content max-[800px]:w-full w-[740px] pt-20 px-4 text-white">
-      <PortableText value={content} />
+      <PortableText value={content} components={articePortableText} />
     </div>
   );
 }

@@ -8,23 +8,21 @@ const ImagePortableComponent = ({ value }: { value: any }) => {
     return value;
   }
   return (
-    <>
-      <div className="w-full flex justify-center flex-col">
-        <Image
-          alt={value.alt || "Image"}
-          loading="lazy"
-          src={`${urlFor(value)}`}
-          height={value?.imageHeight}
-          width={value?.imageWidth}
-          objectFit="contain"
-        />
-        {value.alt && (
-          <i className="text-gray-600 flex justify-center text-center">
-            {value.alt}
-          </i>
-        )}
-      </div>
-    </>
+    <div className="w-full flex justify-center flex-col">
+      <Image
+        alt={value.alt || "Image"}
+        loading="lazy"
+        src={`${urlFor(value)}`}
+        height={value?.imageHeight}
+        width={value?.imageWidth}
+        objectFit="cover"
+      />
+      {value.alt && (
+        <i className="text-gray-600 flex justify-center text-center">
+          {value.alt}
+        </i>
+      )}
+    </div>
   );
 };
 

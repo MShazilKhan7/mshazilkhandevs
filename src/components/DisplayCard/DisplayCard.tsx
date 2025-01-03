@@ -31,13 +31,6 @@ const DisplayCard = ({
     mainImage: { alt = "", asset: { _ref = "" } = {} } = {},
   } = article || {};
   const router = useRouter();
-  const [tag, setTag] = useState<string[]>([]);
-
-  useEffect(() => {
-    if (article?.tags?.length > 0) {
-      tags;
-    }
-  }, [article]);
 
   const onClickHandler = () => {
     if (isArticleCard) {

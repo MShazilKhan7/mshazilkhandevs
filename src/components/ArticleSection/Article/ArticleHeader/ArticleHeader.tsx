@@ -48,7 +48,7 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
       </motion.div>
       <div className="pt-10">
         <div className="title font-bold text-4xl text-white ">
-          <p>{post?.title}</p>
+          <h1>{post?.title}</h1>
         </div>
         <div className="header-info flex flex-wrap gap-3 justify-between md:px-8 py-6 text-white">
           <p>Muhammad Shazil Khan</p>
