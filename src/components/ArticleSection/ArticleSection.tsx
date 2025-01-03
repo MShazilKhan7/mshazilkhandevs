@@ -1,8 +1,9 @@
 import React from "react";
-import DisplayCard from "../DisplayCard/DisplayCard";
+import DisplayCard from "../ArticleCard/ArticleCard";
 import CategoriesBarSection from "../CategoriesBarSection/CategoriesBarSection";
 import { fetchDataFromSanity } from "@/lib/fetch";
 import { postsQuery } from "@/sanity/lib/queries";
+import ArticleCard from "../ArticleCard/ArticleCard";
 
 // export const revalidate = 60; // Optional: Revalidate data every 60 seconds (ISR)
 interface ArticleSectionProps {
@@ -24,10 +25,9 @@ const ArticleSection = ({ articles }: ArticleSectionProps) => {
       <div className="flex flex-col gap-2">
         {articles?.length > 0 &&
           articles.map((article, index) => (
-            <DisplayCard
+            <ArticleCard
               article={article}
               key={index}
-              isArticleCard
               path={article.slug.current}
             />
           ))}

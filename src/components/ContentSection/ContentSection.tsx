@@ -29,6 +29,7 @@ function ContentSection({ posts }: ContentSectionProps) {
             <ContentCard
               key={index}
               post={post}
+              buttonText="View"
               onOpenChange={() => {
                 setSlides(post.images);
                 onOpenChange();

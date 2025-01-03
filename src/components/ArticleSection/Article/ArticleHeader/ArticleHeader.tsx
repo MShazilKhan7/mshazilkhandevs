@@ -25,7 +25,7 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
     estimatedReadingTime,
     mainImageWidth,
     mainImageHeight,
-  } = post;
+  } = post || {};
   const router = useRouter();
   const onClickHandler = () => {
     console.log("Navigate to all articles");
