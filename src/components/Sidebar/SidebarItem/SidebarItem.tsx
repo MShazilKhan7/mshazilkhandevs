@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Navigation } from "@/constants/navigationConfig";
 import Link from "next/link";
@@ -15,7 +16,7 @@ const SidebarItem = ({
   itemNumber,
 }: SidebarItemProps) => {
   return (
-    <Link href={menu?.path ? menu.path : "/"}>
+    <Link shallow={true} href={menu?.path ? menu.path : "/"}>
       <div
         style={
           isFocused

@@ -1,11 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import Pill from "../Pills/Pill";
+import React from "react";
 import { useRouter } from "next/navigation";
-import { IArticleHeaderData } from "@/types/interfaces";
 import Image from "next/image";
-import { urlFor } from "@/sanity/utils/sanity-utils";
-import ArticleTags from "../ArticleSection/Article/ArticleTags/ArticleTags";
 import WorkTags from "../WorkTags/WorkTags";
 
 interface WorkCardProps {
@@ -15,11 +11,13 @@ interface WorkCardProps {
 
 const WorkCard = ({ project, path }: WorkCardProps) => {
   const router = useRouter();
-
+  const onClickHandler = () => {
+    router.push(`projects/${project?.slug}`);
+  };
   return (
     <div
-      //   onClick={onClickHandler}
-      className="w-full article-card transition-all duration-200 cursor-pointer flex gap-4 hover:bg-dark-secondary_two rounded-md px-4 py-4 hover:shadow-lg"
+      onClick={onClickHandler}
+      className="w-full article-card transition-all duration-200 cursor-pointer flex gap-4 hover:bg-dark-secondary_two rounded-md px-4 py-4 hover:shadow-sm"
     >
       <div className="image-div max-[800px]:w-[30vw] max-[800px]:h-[25vw] w-[200px] h-[150px] rounded-md flex items-center">
         {project?.thumbnail && (

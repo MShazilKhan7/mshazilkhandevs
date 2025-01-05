@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import Pill from "@/components/Pills/Pill";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils/sanity-utils";
+import AnimatedHeading from "@/components/AnimatedHeading/AnimatedHeading";
 
 interface ArticleHeaderProps {
   post?: any;
@@ -33,19 +34,7 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
   };
   return (
     <div className="article-section max-[800px]:w-full w-[740px] pt-20 px-4 flex flex-col gap-4">
-      <motion.div
-        whileHover={{
-          x: -3,
-          transition: { duration: 0.3, ease: "easeInOut" },
-        }}
-        className="all-articles-link cursor-pointer w-fit hover:"
-        onClick={onClickHandler}
-      >
-        <p className="flex gap-2 items-center text-[#ABABAB] hover:text-white">
-          <BsArrowLeft />
-          All Articles
-        </p>
-      </motion.div>
+      <AnimatedHeading heading="All Articles" onClickHandler={onClickHandler} />
       <div className="pt-10">
         <div className="title font-bold text-4xl text-white ">
           <h1>{post?.title}</h1>

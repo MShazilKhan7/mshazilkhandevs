@@ -5,11 +5,15 @@ import { ProjectsConfig } from "@/constants/Projects/ProjectsConfig";
 function WorkSection() {
   return (
     <div className="max-[800px]:w-full w-[740px] px-4 text-white article-section pt-32 flex flex-col gap-4">
-      <h1 className="tracking-tighter text-5xl">Best Work</h1>
-      <p>
-        This is my work of art, front-end, backend, ML projects. I also have
-        great understanding of Software Development and Design.
-      </p>
+      <div className="header text-white px-2">
+        <h2 className="text-5xl font-bold text-white">Best Work.</h2>
+        <div className="py-4">
+          <p>
+            This is my work of art, front-end, backend, ML projects. I also have
+            great understanding of Software Development and Design.
+          </p>
+        </div>
+      </div>
       <div>
         {ProjectsConfig.map((project, index) => (
           <WorkCard key={index} project={project} />
