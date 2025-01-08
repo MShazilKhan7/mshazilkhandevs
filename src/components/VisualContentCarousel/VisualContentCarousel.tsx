@@ -36,10 +36,14 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
           const {
             alt,
             asset: { _ref = "" },
-            dimensions: { width, height },
+            dimensions, // Extract dimensions here
           } = slide;
+
+          // Fallback values for width and height
+        const width = dimensions?.width || 500;
+          const height = dimensions?.height || 500;
           return (
-            <div className="slide bg-red-400 w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
+            <div className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
               <Image
                 key={index}
                 alt={alt || "Image"}

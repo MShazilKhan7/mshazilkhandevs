@@ -24,7 +24,7 @@ function ContentSection({ posts }: ContentSectionProps) {
         </h2>
       </div>
       <div className="w-full flex flex-wrap gap-8 md:justify-center lg:justify-start ">
-        {posts.map((post, index) => {
+        {posts?.map((post, index) => {
           return (
             <ContentCard
               key={index}

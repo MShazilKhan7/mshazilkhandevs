@@ -19,7 +19,7 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
   return (
     <>
       <div
-        className="w-full cursor-pointer flex flex-col border border-[#333841] bg-[#1C1F26] md:w-[300px] rounded-2xl px-3 py-3 hover:border-[#454b56] transition-all duration-75 shadow-2xl"
+        className="w-full cursor-pointer flex flex-col justify-between border border-[#333841] bg-[#1C1F26] md:w-[300px] rounded-2xl px-3 py-3 hover:border-[#454b56] transition-all duration-75 shadow-2xl"
         onMouseOver={() => {
           setVisible(true);
         }}
@@ -43,11 +43,12 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
           </div>
         </div>
         <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:gap-5 md:flex-col md:gap-0 md:justify-normal">
-          <div className="flex flex-col sm:w-[calc(100%-270px)] md:w-full">
+          <div className="flex flex-col  sm:w-[calc(100%-270px)] md:w-full">
             <div className="heading mt-2">
-              <h3 className="text-white font-bold text-[20px] overflow-hidden text-ellipsis break-words line-clamp-3">
+              <h3 className="text-white font-bold text-[20px] text-ellipsis break-words line-clamp-2">
                 {title}
               </h3>
+             
             </div>
             <div className="hashtags py-1">
               {tags?.map(({ title }, index) => (
@@ -65,7 +66,7 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
               width={270}
               height={160}
               className="w-full h-[160px] sm:w-[270px] md:w-full rounded-md"
-              src={`${urlFor(thumbnail.asset._ref)}`}
+              src={`${urlFor(thumbnail?.asset?._ref)}`}
               objectFit="contain"
             />
           </div>
