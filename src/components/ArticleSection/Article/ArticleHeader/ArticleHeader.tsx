@@ -7,6 +7,7 @@ import Pill from "@/components/Pills/Pill";
 import Image from "next/image";
 import { urlFor } from "@/sanity/utils/sanity-utils";
 import AnimatedHeading from "@/components/AnimatedHeading/AnimatedHeading";
+import ArticleTags from "../ArticleTags/ArticleTags";
 
 interface ArticleHeaderProps {
   post?: any;
@@ -36,13 +37,13 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
     <div className="article-section max-[800px]:w-full w-[740px] pt-20 px-4 flex flex-col gap-4">
       <AnimatedHeading heading="All Articles" onClickHandler={onClickHandler} />
       <div className="pt-10">
-        <div className="title font-bold text-4xl text-white ">
+        <div className="title font-bold text-4xl text-white text-center">
           <h1>{post?.title}</h1>
         </div>
         <div className="header-info flex flex-wrap gap-3 justify-between md:px-8 py-6 text-white">
           <p>Muhammad Shazil Khan</p>
           <p>August 2023</p>
-          <p>3 mins read</p>
+          <p>{post?.estimatedReadingTime + " "}min </p>
         </div>
         <div className="thumbnail-image">
           <Image
@@ -53,17 +54,7 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
           />
         </div>
         <div className="tags flex flex-wrap justify-center gap-6 px-2 md:px-4 py-4">
-          <Pill
-            text="#frontend"
-            variant="text"
-            onClickHandler={() => {
-              console.log("Child Event Stop Propagating ");
-            }}
-            className="cursor-pointer"
-          />
-          <Pill text="#webdev" variant="text" />
-          <Pill text="#reacthooks" variant="text" />
-          <Pill text="#reacthooks" variant="text" />
+          <ArticleTags tags={tags} />
         </div>
       </div>
     </div>
