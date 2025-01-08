@@ -43,8 +43,9 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
             width={200}
             height={150}
             quality={70}
-            className="w-full h-full object-cover rounded-md"
+            className="w-full h-full rounded-md"
             priority={true}
+            objectFit="contain"
             blurDataURL={`${urlFor(_ref)}`}
             placeholder="blur"
           />
