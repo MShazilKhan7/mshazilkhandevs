@@ -19,7 +19,7 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
   return (
     <>
       <div
-        className="w-full cursor-pointer flex flex-col justify-between border border-[#333841] bg-[#1C1F26] md:w-[300px] rounded-2xl px-3 py-3 hover:border-[#454b56] transition-all duration-75 shadow-2xl"
+        className="w-full cursor-pointer flex flex-col justify-between border border-light-gray_70 hover:border-light-gray_80 dark:border bg-light-sky_10 dark:border-[#333841] dark:bg-[#1C1F26] dark:hover:border-[#454b56] md:w-[300px] rounded-2xl px-3 py-3 transition-all duration-75 "
         onMouseOver={() => {
           setVisible(true);
         }}
@@ -31,7 +31,7 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
         <div className="top-details transition-all ease-in-out duration-200 flex justify-between py-2 items-center h-[40px] ">
           <div className="icon rounded-full w-8 h-8 bg-black"></div>
           <div
-            className={`flex gap-2 items-center ${
+            className={`flex gap-2 items-center text-black ${
               visible ? "md:visible" : "md:invisible"
             }`}
           >
@@ -45,18 +45,17 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
         <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:gap-5 md:flex-col md:gap-0 md:justify-normal">
           <div className="flex flex-col  sm:w-[calc(100%-270px)] md:w-full">
             <div className="heading mt-2">
-              <h3 className="text-white font-bold text-[20px] text-ellipsis break-words line-clamp-2">
+              <h3 className="font-bold text-[20px] text-ellipsis break-words line-clamp-2">
                 {title}
               </h3>
-             
             </div>
-            <div className="hashtags py-1">
+            <div className="hashtags py-1 flex gap-2">
               {tags?.map(({ title }, index) => (
-                <Pill key={index} variant="simple" text={title} />
+                <Pill key={index} variant="simple" text={`#${title}`} />
               ))}
             </div>
             <div className="read-time">
-              <h3 className="text-sm text-[#A8B3CF]">Aug 22. 3m read time</h3>
+              <h3 className="text-sm text-light-gray_40 dark:text-[#A8B3CF]">Aug 22. 3m read time</h3>
             </div>
           </div>
           <div className="center-image w-full sm:w-[270px] md:w-full h-[160px] rounded-md mt-2">

@@ -23,8 +23,24 @@ const config = {
           primary: "#161616",
           secondary: "#0F0F0F",
           secondary_two: "#1C1C1C",
+          text_white: "#FFFFFF",
           text_primary: "#757575",
           text_secondary: "#CACACA",
+        },
+        light: {
+          primary: "#FFFFFF",
+          secondary: "#F2F2F3",
+          text_primary: "#00000",
+          text_secondary: "#0E1217",
+          gray_10: "#DBDFE4",
+          gray_20: "#DCE0E5",
+          gray_30: "#525866",
+          gray_40: "#555B68", // text
+          gray_50: "#DCDEE0", // hover sidebar
+          gray_60: "#DCDEE0", // focused
+          sky_10: "#F5F8FC",
+          gray_70: "#D4D8DE",
+          gray_80: "#B8BBC4",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
