@@ -24,7 +24,7 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Work",
-    path: "/",
+    path: "projects/",
     icon: <BsSendArrowUp />,
   },
   {

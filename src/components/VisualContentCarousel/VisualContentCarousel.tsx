@@ -36,8 +36,12 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
           const {
             alt,
             asset: { _ref = "" },
-            dimensions: { width, height },
+            dimensions, // Extract dimensions here
           } = slide;
+
+          // Fallback values for width and height
+          const width = dimensions?.width || 500;
+          const height = dimensions?.height || 500;
           return (
             <div className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
               <Image
@@ -45,10 +49,13 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
                 alt={alt || "Image"}
                 loading="lazy"
                 src={`${urlFor(_ref)}`}
+                className="w-full h-full object-contain"
                 height={height}
                 width={width}
-                objectFit="contain"
               />
+              <div className="flex justify-center">
+                <p className="font-bold">{alt}</p>
+              </div>
             </div>
           );
         })}

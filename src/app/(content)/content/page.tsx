@@ -1,3 +1,4 @@
+// app/visual-content/page.tsx
 import React from "react";
 import ContentSection from "@/components/ContentSection/ContentSection";
 import { fetchDataFromSanity } from "@/lib/fetch";
@@ -6,6 +7,9 @@ import { contentPosts } from "@/sanity/lib/queries";
 const VisualContent = async () => {
   const posts = await fetchDataFromSanity({
     query: contentPosts,
+    fetchOptions: {
+      cache: "no-store",
+    },
   });
 
   return (

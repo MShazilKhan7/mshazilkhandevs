@@ -1,6 +1,6 @@
 import React from "react";
 import FeaturedWorkCard from "../FeaturedWorkCard/FeaturedWorkCard";
-import DisplayCard from "../DisplayCard/DisplayCard";
+import DisplayCard from "../ArticleCard/ArticleCard";
 
 const FeaturedWork = () => {
   return (

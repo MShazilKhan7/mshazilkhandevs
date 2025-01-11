@@ -407,7 +407,6 @@ export const postsQuery = groq`*[_type == "post"] | order(_createdAt desc){
         slug,
         "tags": tags[]-> {title,slug},
         "author": author -> {name,slug,image,designation,profiles,bio,about},
-        "series":series -> {title,slug},
         "category": categories[]-> {title,slug},
         "numberOfCharacters": length(pt::text(body)),
         "estimatedWordCount": round(length(pt::text(body)) / 5),
@@ -445,7 +444,8 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
       "mainImageHeight": mainImage.asset->metadata.dimensions.height
   }`;
 
-export const contentPosts = groq`*[_type == "gallery"]{
+export const contentPosts = groq`
+  *[_type == "gallery"]{
     _createdAt,
     _updatedAt,
     publishedAt,
@@ -455,6 +455,7 @@ export const contentPosts = groq`*[_type == "gallery"]{
     "tags": tags[]-> {title, slug},
     images[]{
       ...,
-      "dimensions": asset->metadata.dimensions
+      "dimensions": asset->metadata.dimensions || null
     }
-  }`;
+  }
+`;

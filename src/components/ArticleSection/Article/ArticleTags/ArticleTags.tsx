@@ -10,6 +10,7 @@ interface ArticleTagsProps {
       _type: string;
     };
   }[];
+  onTagClick?: () => void;
 }
 
 function ArticleTags({ tags }: ArticleTagsProps) {
