@@ -21,15 +21,13 @@ const SidebarItem = ({
         style={
           isFocused
             ? {
-                backgroundColor: "#2B2B2B",
-                color: "white",
                 borderColor: "#393939",
               }
             : {
                 borderColor: "#0F0F0F",
               }
         }
-        className={`sidebar-item cursor-pointer transition-all border-[0.5px] rounded-md flex gap-2 items-center px-4 py-2 text-md text-[#929292] hover:text-white `}
+        className={`${isFocused ? "bg-light-gray_60 dark:bg-[#2B2B2B] text-black dark:text-white" : "text-light-gray_40 dark:text-dark-text_primary"} sidebar-item cursor-pointer transition-all duration-75 ease-in-out dark:border-[0.5px] rounded-md flex gap-2 items-center px-4 py-2 text-md hover:text-black dark:hover:text-white `}
         onClick={() => setActiveItem(itemNumber)}
       >
         {menu.icon}

@@ -10,7 +10,7 @@ interface ContentSectionProps {
 
 function ContentSection({ posts }: ContentSectionProps) {
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
-  const [slides, setSlides] = useState<any[]>([]);
+  const [post, setPost] = useState<any>();
 
   const onOpenChange = () => {
     console.log("called on open change.");
@@ -19,7 +19,7 @@ function ContentSection({ posts }: ContentSectionProps) {
   return (
     <div className="px-6 py-4">
       <div className="py-2 pb-8 text-center">
-        <h2 className="tracking-tight text-white font-bold text-[35px]">
+        <h2 className="tracking-tight font-bold text-[35px] text-light-text_primary dark:text-white">
           Welcome to My Content Space. Learn Interactively
         </h2>
       </div>
@@ -31,7 +31,7 @@ function ContentSection({ posts }: ContentSectionProps) {
               post={post}
               buttonText="View"
               onOpenChange={() => {
-                setSlides(post.images);
+                setPost(post);
                 onOpenChange();
               }}
             />
@@ -40,7 +40,7 @@ function ContentSection({ posts }: ContentSectionProps) {
         <VisualContentDialog
           open={dialogOpen}
           onOpenChange={onOpenChange}
-          slides={slides}
+          post={post}
         />
       </div>
     </div>
