@@ -18,7 +18,7 @@ function AnimatedHeading({ onClickHandler, heading }: AnimatedHeadingProps) {
       className="all-articles-link cursor-pointer w-fit hover:"
       onClick={onClickHandler}
     >
-      <p className="flex gap-2 items-center text-[#ABABAB] hover:text-white">
+      <p className="flex gap-2 items-center text-light-gray_40 hover:text-black dark:text-[#ABABAB]  dark:hover:text-white">
         <BsArrowLeft />
         {heading}
       </p>

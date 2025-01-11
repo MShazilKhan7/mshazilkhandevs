@@ -34,24 +34,26 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
     router.back();
   };
   return (
-    <div className="article-section max-[800px]:w-full w-[740px] pt-20 px-4 flex flex-col gap-4">
+    <div className="article-section max-[800px]:w-full w-[740px] pt-20 px-4 flex flex-col gap-4 e">
       <AnimatedHeading heading="All Articles" onClickHandler={onClickHandler} />
       <div className="pt-10">
-        <div className="title font-bold text-4xl text-white text-center">
+        <div className="title font-bold text-4xl text-center">
           <h1>{post?.title}</h1>
         </div>
-        <div className="header-info flex flex-wrap gap-3 justify-between md:px-8 py-6 text-white">
+        <div className="header-info flex flex-wrap gap-3 justify-between md:px-8 py-6">
           <p>Muhammad Shazil Khan</p>
           <p>August 2023</p>
           <p>{post?.estimatedReadingTime + " "}min </p>
         </div>
         <div className="thumbnail-image">
-          <Image
-            src={`${urlFor(mainImage?.asset?._ref)}`}
-            alt={mainImage?.alt}
-            width={mainImageWidth}
-            height={mainImageHeight}
-          />
+          {mainImage?.asset?._ref && (
+            <Image
+              src={`${urlFor(mainImage?.asset?._ref)}`}
+              alt={mainImage?.alt}
+              width={mainImageWidth}
+              height={mainImageHeight}
+            />
+          )}
         </div>
         <div className="tags flex flex-wrap justify-center gap-6 px-2 md:px-4 py-4">
           <ArticleTags tags={tags} />

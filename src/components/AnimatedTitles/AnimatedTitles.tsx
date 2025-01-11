@@ -16,7 +16,7 @@ const AnimatedTitles = () => {
         repeat: Infinity,
         repeatType: "mirror",
       }}
-      className="text-dark-text_secondary text-sm"
+      className="text-light-text_secondary dark:text-dark-text_secondary text-sm"
       onUpdate={(latest) => {
         if (latest.y === -10) {
           setCounter((prevCounter) => prevCounter + 1);

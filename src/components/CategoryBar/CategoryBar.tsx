@@ -96,18 +96,21 @@ export function CategoriesBar({ data, variant }: CategoriesBarProps) {
     return <p>Loading Categories...</p>;
   }
   return (
-    <ScrollArea className="w-full px-2 whitespace-nowrap shadow-2xl rounded-lg backdrop-blur-[0.7px] border border-white/20">
+    <ScrollArea className="w-full px-2 whitespace-nowrap shadow-md rounded-lg backdrop-blur-[0.7px] border dark:border-white/20">
       <div className="flex w-full space-x-4 px-4 py-2">
         {error && <p className="text-red-500">{error}</p>}
         {!loading &&
           !error &&
           categories?.map((cateogory) => (
-            <h3 className="text-white cursor-pointer" key={cateogory._id}>
+            <h3
+              className="text-black dark:text-white cursor-pointer"
+              key={cateogory._id}
+            >
               {cateogory.title}
             </h3>
           ))}
       </div>
-      <ScrollBar orientation="horizontal" color="gray" className="h-1" />
+      <ScrollBar orientation="horizontal" color="white" className="h-1" />
     </ScrollArea>
   );
 }
