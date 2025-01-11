@@ -14,13 +14,13 @@ import VisualContentCarousel from "../VisualContentCarousel/VisualContentCarouse
 interface VisualContentDialogProps {
   open: boolean;
   onOpenChange: () => void;
-  slides: any[];
+  post: any;
 }
 
 const VisualContentDialog = ({
   open,
   onOpenChange,
-  slides,
+  post,
 }: VisualContentDialogProps) => {
   return (
     <div className="w-full">
@@ -28,9 +28,16 @@ const VisualContentDialog = ({
         <DialogContent
           style={{
             width: "70%",
+            backgroundColor: "white",
           }}
         >
-          <VisualContentCarousel visuals={slides} />
+          <DialogHeader>
+            <DialogTitle className="text-center text-black  md:text-2xl font-semibold">
+              {post?.title}
+            </DialogTitle>
+            {/* <DialogDescription></DialogDescription> */}
+          </DialogHeader>
+          <VisualContentCarousel visuals={post?.images} />
         </DialogContent>
       </Dialog>
     </div>

@@ -62,6 +62,21 @@ export const galleryType = defineType({
       type: "array",
       of: [{ type: "reference", to: { type: "tags" } }],
     }),
+    defineField({
+      name: "isSeries",
+      title: "Is Series",
+      type: "boolean",
+      options: {
+        layout: "checkbox",
+      },
+    }),
+    defineField({
+      name: "series",
+      title: "Series",
+      type: "reference",
+      to: { type: "series" },
+    }),
+
     {
       name: "zoom",
       type: "boolean",

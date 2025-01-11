@@ -40,7 +40,7 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
           } = slide;
 
           // Fallback values for width and height
-        const width = dimensions?.width || 500;
+          const width = dimensions?.width || 500;
           const height = dimensions?.height || 500;
           return (
             <div className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
