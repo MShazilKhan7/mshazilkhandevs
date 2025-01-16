@@ -19,7 +19,7 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
   return (
     <>
       <div
-        className="w-full cursor-pointer flex flex-col justify-between border border-light-gray_70 hover:border-light-gray_80 dark:border bg-light-sky_10 dark:border-[#333841] dark:bg-[#1C1F26] dark:hover:border-[#454b56] md:w-[300px] rounded-2xl px-3 py-3 transition-all duration-75 "
+        className="w-full cursor-pointer flex flex-col justify-between border border-light-gray_70 hover:border-light-gray_80 dark:border bg-light-sky_10 dark:border-[#333841] dark:bg-[#1C1F26] dark:hover:border-[#454b56] md:w-[300px] rounded-2xl px-3 py-3 transition-all duration-75 hover:shadow-sm"
         onMouseOver={() => {
           setVisible(true);
         }}
@@ -55,7 +55,9 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
               ))}
             </div>
             <div className="read-time">
-              <h3 className="text-sm text-light-gray_40 dark:text-[#A8B3CF]">Aug 22. 3m read time</h3>
+              <h3 className="text-sm text-light-gray_40 dark:text-[#A8B3CF]">
+                Aug 22. 3m read time
+              </h3>
             </div>
           </div>
           <div className="center-image w-full sm:w-[270px] md:w-full h-[160px] rounded-md mt-2">

@@ -33,6 +33,7 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
     <div className="carousel max-w-full md:h-[74vh] ">
       <div className="carousel-images w-full h-full overflow-hidden flex  rounded-md">
         {visuals?.map((slide, index) => {
+          console.log("slide:", slide);
           const {
             alt,
             asset: { _ref = "" },
@@ -44,15 +45,17 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
           const height = dimensions?.height || 500;
           return (
             <div className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
-              <Image
-                key={index}
-                alt={alt || "Image"}
-                loading="lazy"
-                src={`${urlFor(_ref)}`}
-                className="w-full h-full object-contain"
-                height={height}
-                width={width}
-              />
+              {_ref != "" && (
+                <Image
+                  key={index}
+                  alt={alt || "Image"}
+                  loading="lazy"
+                  src={`${urlFor(_ref)}`}
+                  className="w-full h-full object-contain"
+                  height={height}
+                  width={width}
+                />
+              )}
               <div className="flex justify-center">
                 <p className="font-bold">{alt}</p>
               </div>
