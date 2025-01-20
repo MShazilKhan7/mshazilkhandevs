@@ -36,7 +36,7 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
   return (
     <div className="article-section max-[800px]:w-full w-[740px] pt-20 px-4 flex flex-col gap-4 e">
       <AnimatedHeading heading="All Articles" onClickHandler={onClickHandler} />
-      <div className="pt-10">
+      <div className="pt-8">
         <div className="title font-bold text-4xl text-center">
           <h1>{post?.title}</h1>
         </div>
