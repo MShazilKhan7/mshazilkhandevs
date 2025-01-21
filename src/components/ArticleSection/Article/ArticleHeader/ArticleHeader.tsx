@@ -32,9 +32,9 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
   const onClickHandler = () => {
     console.log("Navigate to all articles");
     router.back();
-  };
+  };  
   return (
-    <div className="article-section max-[800px]:w-full w-[740px] pt-20 px-4 flex flex-col gap-4 e">
+    <div className="article-section pt-20 px-4 flex flex-col gap-4">
       <AnimatedHeading heading="All Articles" onClickHandler={onClickHandler} />
       <div className="pt-8">
         <div className="title font-bold text-4xl text-center">

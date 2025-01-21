@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import FeaturedWorkCard from "@/components/FeaturedWorkCard/FeaturedWorkCard";
 import FeaturedWork from "@/components/FeaturedWork/FeaturedWork";
 import { ModeToggle } from "@/components/ui/mode-toggle";
+import Footer from "@/components/Footer/Footer";
 
 export default function RootLayout({
   children,
@@ -76,6 +77,7 @@ export default function RootLayout({
                 </div>
               </div>
               {children}
+              <Footer/>
             </div>
           </div>
         </ThemeProvider>

@@ -56,6 +56,9 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
           <h2 className="font-bold text-light-text_primary">
             {title && title}
           </h2>
+          <p className="text-sm text-dark-text_primary">
+            {estimatedReadingTime} min
+          </p>
         </div>
         <div className="pill-section">
           <ArticleTags tags={tags} />
