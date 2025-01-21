@@ -7,7 +7,7 @@ interface ArticleContentProps {
 }
 function ArticleContent({ content }: ArticleContentProps) {
   return (
-    <div className="article-content max-[800px]:w-full w-[740px] pt-20 px-4">
+    <div className="article-content pt-20 px-4">
       <PortableText value={content} components={articePortableText} />
     </div>
   );
