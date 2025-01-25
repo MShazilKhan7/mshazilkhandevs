@@ -6,10 +6,18 @@ import Pill from "../Pills/Pill";
 import { BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
 import { IoIosLink } from "react-icons/io";
-import { ContentCardDetails } from "@/types/interfaces";
-import Image from "next/image";
+import { FaYoutube } from "react-icons/fa6";
+import { IContentCardDetails } from "@/types/interfaces";
 import { urlFor } from "@/sanity/utils/sanity-utils";
-interface ContentCardProps extends ContentCardDetails {
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import Image from "next/image";
+
+interface ContentCardProps extends IContentCardDetails {
   onOpenChange: () => void;
 }
 
@@ -29,17 +37,43 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
         onClick={onOpenChange}
       >
         <div className="top-details transition-all ease-in-out duration-200 flex justify-between py-2 items-center h-[40px] ">
-          <div className="icon rounded-full w-8 h-8 bg-black"></div>
+          <div className="icon rounded-full w-8 h-8 bg-black">
+            <Image
+              src={"/my_profile.jpg"}
+              alt="icon"
+              className="w-full h-full rounded-full"
+              width={32}
+              height={32}
+            />
+          </div>
           <div
             className={`flex gap-2 items-center text-black ${
               visible ? "md:visible" : "md:invisible"
             }`}
           >
+            <TooltipProvider>
+              <Tooltip delayDuration={0.5}>
+                <TooltipTrigger>
+                  <FaYoutube
+                    onClick={(event) => {
+                      event.stopPropagation();
+                    }}
+                    color="#F70000"
+                    size={28}
+                    className="hover:opacity-50"
+                  />
+                </TooltipTrigger>
+                <TooltipContent className="bg-white dark:bg-black" align="end">
+                  <p className="text-black dark:text-white">Watch video</p>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+
             <RdButton text={buttonText || ""} />
-            <IoMdMore
+            {/* <IoMdMore
               size={28}
               className="cursor-pointer rounded-lg text-[#A8B3CF] hover:text-white hover:bg-[#383D47]"
-            />
+            /> */}
           </div>
         </div>
         <div className="w-full flex flex-col sm:flex-row sm:justify-between sm:gap-5 md:flex-col md:gap-0 md:justify-normal">

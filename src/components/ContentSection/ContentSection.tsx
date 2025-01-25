@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import ContentCard from "../ContentCard/ContentCard";
 import VisualContentDialog from "../VisualContentDialog/VisualContentDialog";
-import { ContentPost } from "@/types/interfaces";
+import { IContentPost } from "@/types/interfaces";
 
 interface ContentSectionProps {
-  posts: ContentPost[];
+  posts: IContentPost[];
 }
 
 function ContentSection({ posts }: ContentSectionProps) {

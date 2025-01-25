@@ -27,12 +27,12 @@ const VisualContentDialog = ({
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent
           style={{
-            width: "70%",
+            width: "80%",
             backgroundColor: "white",
           }}
         >
           <DialogHeader>
-            <DialogTitle className="text-center text-black  md:text-2xl font-semibold">
+            <DialogTitle className="text-center text-base text-black md:text-2xl font-semibold">
               {post?.title}
             </DialogTitle>
             {/* <DialogDescription></DialogDescription> */}

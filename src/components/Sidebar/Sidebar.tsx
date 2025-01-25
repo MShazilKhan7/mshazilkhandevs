@@ -12,7 +12,7 @@ const Sidebar = () => {
       <ProfileTag />
 
       {navigationMenus?.map((menu, index) => {
-        if (index === 4) {
+        if (index === 5) {
           return (
             <p key={10} className="text-[10px]  px-4 py-4  ">
               SOCIALS
