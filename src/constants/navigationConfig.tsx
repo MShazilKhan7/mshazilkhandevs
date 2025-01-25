@@ -24,7 +24,7 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Work",
-    path: "projects/",
+    path: "/projects/",
     icon: <BsSendArrowUp />,
   },
   {
@@ -33,15 +33,16 @@ export const navigationMenus: Navigation[] = [
     icon: <FaPen />,
   },
   {
-    title: "Content",
-    path: "content/",
-    icon: <SiDocsdotrs />,
-  },
-  {
     title: "Stack",
     path: "/",
     icon: <TiSpanner />,
   },
+  {
+    title: "Content",
+    path: "/content/",
+    icon: <SiDocsdotrs />,
+  },
+
   {
     title: "Resume",
     path: "/",
