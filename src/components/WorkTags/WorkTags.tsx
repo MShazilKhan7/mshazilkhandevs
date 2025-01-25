@@ -1,11 +1,14 @@
 import React from "react";
 import Pill from "../Pills/Pill";
+import { Tag } from "@/types/interfaces";
 
-function WorkTags({ tags }: { tags: string[] }) {
+function WorkTags({ tags }: { tags: Tag[] }) {
   return (
     <div className="flex gap-2">
-      {tags?.map((title, index) => {
-        return <Pill key={index} text={`${title}`} variant="hover-outlined" />;
+      {tags?.map((tag, index) => {
+        return (
+          <Pill key={index} text={`${tag?.title}`} variant="hover-outlined" />
+        );
       })}
     </div>
   );

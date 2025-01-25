@@ -418,8 +418,8 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
       _createdAt,
       _updatedAt,
       publishedAt,
-    title,
-    body[]{
+      title,
+      body[]{
       ..., // Include all existing properties of the body field
       _type == "image" => {
           "imageWidth": asset->metadata.dimensions.width,
@@ -444,6 +444,7 @@ export const postQuery = groq`*[_type == "post" && slug.current == $slug][0]{
       "mainImageHeight": mainImage.asset->metadata.dimensions.height
   }`;
 
+// content posts
 export const contentPosts = groq`
   *[_type == "gallery"]{
     _createdAt,
@@ -451,6 +452,7 @@ export const contentPosts = groq`
     publishedAt,
     title,
     slug,
+    youtube,
     thumbnail,
     "tags": tags[]-> {title, slug},
     images[]{
@@ -459,3 +461,47 @@ export const contentPosts = groq`
     }
   }
 `;
+
+// legal queries
+export const getLegalsQuery = groq`
+*[_type=legal]{
+  _createdAt,
+    _updatedAt,
+    publishedAt,
+  title,
+  body,
+  meta_description,
+  slug,}`;
+
+//  $slug parameter placeholder
+export const getLegalQuery = groq`*[_type == "legal" && slug.current == $slug]{
+    _createdAt,
+    _updatedAt,
+    publishedAt,
+    title,
+    body,
+    meta_description,
+    slug,
+}[0]`;
+// ******** project query ********
+export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc){
+    _createdAt,
+    _updatedAt,
+    title,
+    slug,
+    thumbnail,
+    "tags": tags[]-> {title,slug},
+    publishedAt,
+  }`;
+
+export const projectQuery = groq`*[_type == "project" && slug.current == $slug] | {
+    _createdAt,
+    _updatedAt,
+    title,
+    slug,
+    thumbnail,
+    contribution,
+    "tags": tags[]-> {title,slug},
+    projectDetails,
+    publishedAt,
+}[0]`;

@@ -92,15 +92,25 @@ export interface iNavSocials {
   icon: any;
 }
 
-export interface ContentCardDetails {
+export interface IContentCardDetails {
   buttonText?: string;
-  post: ContentPost;
+  post: IContentPost;
 }
 
-export interface ContentPost {
+export interface IContentPost {
   title: string;
   slug: string;
   tags: Tag[];
   thumbnail: any;
   images: any[];
+}
+
+export interface ILegal {
+  _createdAt: Date;
+  _updatedAt: Date;
+  publishedAt: Date;
+  title: string;
+  body: any;
+  meta_description: string;
+  slug: string;
 }
