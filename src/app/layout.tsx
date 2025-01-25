@@ -22,7 +22,6 @@ export default function RootLayout({
   const ToggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
-
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -60,7 +59,7 @@ export default function RootLayout({
             <div
               className={`${
                 sidebarOpen ? "overflow-y-hidden opacity-5" : "overflow-y-auto"
-              } right-container h-screen w-full lg:w-[calc(100%-240px)] dark:bg-dark-primary light:bg-light-primary`}
+              } right-container h-screen w-full lg:w-[calc(100%-240px)] dark:bg-dark-primary bg-light-primary`}
             >
               <div className={`w-full lg:flex hidden justify-end p-2`}>
                 <ModeToggle />
@@ -76,8 +75,14 @@ export default function RootLayout({
                   <GiHamburgerMenu onClick={ToggleSidebar} size={32} />
                 </div>
               </div>
-              {children}
-              <Footer/>
+              {/* <div className="min-h-screen flex justify-center bg-red-500">
+                <div className="max-[800px]:w-full w-[740px] px-4">
+                  {children}
+                </div>
+            </div> */}
+              {/* altternative universal width setting  */}
+              <div className="min-h-screen">{children}</div>
+              <Footer />
             </div>
           </div>
         </ThemeProvider>
