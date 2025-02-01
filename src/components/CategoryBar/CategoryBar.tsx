@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { fetchDataFromSanity } from "@/lib/fetch";
+import { SanityDocument } from "next-sanity";
 export interface Artwork {
   artist: string;
 }
@@ -74,7 +75,7 @@ export function CategoriesBar({ data, variant }: CategoriesBarProps) {
     setLoading(true);
     setError(null);
     try {
-      const fetchedCategories = await fetchDataFromSanity({
+      const fetchedCategories = await fetchDataFromSanity<SanityDocument[]>({
         query: `*[_type == "category"]`,
       });
       setCategories([...fetchedCategories]);
