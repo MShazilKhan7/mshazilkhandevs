@@ -12,7 +12,7 @@ interface Props {
   };
 }
 
-export const Project = async ({ params }: Props) => {
+const Project = async ({ params }: Props) => {
   const project = await fetchDataFromSanity<SanityDocument>({
     query: projectQuery,
     params,

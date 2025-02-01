@@ -55,7 +55,7 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
               <Tooltip delayDuration={0.5}>
                 <TooltipTrigger>
                   <FaYoutube
-                    onClick={(event) => {
+                    onClick={(event: any) => {
                       event.stopPropagation();
                     }}
                     color="#F70000"
