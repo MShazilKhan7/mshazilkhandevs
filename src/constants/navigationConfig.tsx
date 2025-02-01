@@ -1,5 +1,5 @@
 import { MdOutlineExplore } from "react-icons/md";
-import { BsSendArrowUp } from "react-icons/bs";
+import { BsArrowUp } from "react-icons/bs";
 import { TiSpanner } from "react-icons/ti";
 import { GrDocumentOutlook } from "react-icons/gr";
 import { IoPersonCircleOutline } from "react-icons/io5";
@@ -25,7 +25,7 @@ export const navigationMenus: Navigation[] = [
   {
     title: "Work",
     path: "/projects/",
-    icon: <BsSendArrowUp />,
+    icon: <BsArrowUp />,
   },
   {
     title: "Articles",
