@@ -11,8 +11,6 @@ const Articles = async () => {
     query: postsQuery,
   });
 
-  console.log("articles", articles);
-  console.log("hellow");
   return (
     <div className="flex justify-center">
       <ArticleSection articles={articles} />

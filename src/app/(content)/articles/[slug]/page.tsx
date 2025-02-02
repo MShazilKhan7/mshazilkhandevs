@@ -18,8 +18,6 @@ const SingleArticle = async ({ params }: Props) => {
     params,
   });
 
-  console.log("slug agaya");
-  console.log("article agaya", post);
   return (
     <div className="flex justify-center"> 
       <ArticleDetails article={post} />

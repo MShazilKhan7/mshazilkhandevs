@@ -13,7 +13,6 @@ function ContentSection({ posts }: ContentSectionProps) {
   const [post, setPost] = useState<any>();
 
   const onOpenChange = () => {
-    console.log("called on open change.");
     setDialogOpen(!dialogOpen);
   };
   return (
