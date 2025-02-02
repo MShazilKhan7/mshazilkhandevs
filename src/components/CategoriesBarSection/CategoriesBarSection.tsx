@@ -7,7 +7,7 @@ const CategoriesBarSection = () => {
   return (
     <div className="categories py-2">
       {/* <h2>Categories.</h2 */}
-      <CategoriesBar data={[]} />
+      <CategoriesBar />
     </div>
   );
 };
