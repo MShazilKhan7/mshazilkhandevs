@@ -79,7 +79,6 @@ export function CategoriesBar({ data, variant }: CategoriesBarProps) {
         query: `*[_type == "category"]`,
       });
       setCategories([...fetchedCategories]);
-      console.log("Fetched categories:", fetchedCategories);
     } catch (error) {
       console.error("Error fetching categories:", error);
       setError("Error fetching categories");
@@ -89,7 +88,6 @@ export function CategoriesBar({ data, variant }: CategoriesBarProps) {
   };
 
   useEffect(() => {
-    console.log("Fetching categories...");
     getCategories();
   }, []);
 

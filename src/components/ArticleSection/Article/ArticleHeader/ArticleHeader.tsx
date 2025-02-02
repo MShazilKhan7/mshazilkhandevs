@@ -30,7 +30,6 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
   } = post || {};
   const router = useRouter();
   const onClickHandler = () => {
-    console.log("Navigate to all articles");
     router.back();
   };  
   return (

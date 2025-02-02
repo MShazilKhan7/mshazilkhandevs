@@ -18,7 +18,6 @@ const Project = async ({ params }: Props) => {
     params,
   });
 
-  console.log("single project", project);
   return (
     <div>
       <ProjectDetails project={project} />

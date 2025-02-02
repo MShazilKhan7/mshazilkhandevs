@@ -29,7 +29,6 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
   const onClickHandler = () => {
     router.push(`/articles/${path}`);
   };
-  console.log("article", article);
   return (
     <div
       onClick={onClickHandler}

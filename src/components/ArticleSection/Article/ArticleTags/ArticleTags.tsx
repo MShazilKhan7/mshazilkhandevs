@@ -15,7 +15,6 @@ interface ArticleTagsProps {
 
 function ArticleTags({ tags }: ArticleTagsProps) {
   const onClickHandler = (event: React.MouseEvent) => {
-    console.log("Child Event Stop Propagating ");
     event.stopPropagation();
   };
   return (

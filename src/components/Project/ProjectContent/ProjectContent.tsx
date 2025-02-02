@@ -11,7 +11,6 @@ function ProjectContent({ project }: ProjectContentProps) {
     <div className="project-content relative max-[800px]:w-full w-[740px] px-4 text-light-text_primary dark:text-white">
       <div className="w-full h-full">
         {projectDetails?.map((project: any) => {
-          console.log("project found", project);
           return (
             <>
               <Image
