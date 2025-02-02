@@ -1,14 +1,14 @@
 import { MdOutlineExplore } from "react-icons/md";
-import { BsArrowUp } from "react-icons/bs";
-import { TiSpanner } from "react-icons/ti";
 import { GrDocumentOutlook } from "react-icons/gr";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { CiLinkedin } from "react-icons/ci";
+import { BsCursor } from "react-icons/bs";
 import { RiLinkedinLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa6";
 import { FaMedium } from "react-icons/fa6";
 import { FaPen } from "react-icons/fa6";
 import { SiDocsdotrs } from "react-icons/si";
+import { GiSpanner } from "react-icons/gi";
 
 export interface Navigation {
   title: string;
@@ -25,7 +25,7 @@ export const navigationMenus: Navigation[] = [
   {
     title: "Work",
     path: "/projects/",
-    icon: <BsArrowUp />,
+    icon: <BsCursor />,
   },
   {
     title: "Articles",
@@ -34,8 +34,8 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Stack",
-    path: "/",
-    icon: <TiSpanner />,
+    path: "/Stack",
+    icon: <GiSpanner />,
   },
   {
     title: "Content",

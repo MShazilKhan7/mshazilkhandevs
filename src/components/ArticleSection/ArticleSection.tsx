@@ -11,7 +11,7 @@ interface ArticleSectionProps {
 }
 const ArticleSection = ({ articles }: ArticleSectionProps) => {
   return (
-    <div className="max-[800px]:w-full w-[740px] px-4 text-light-text_secondary dark:text-white article-section pt-32 flex flex-col gap-4">
+    <div className="max-[800px]:w-full w-[740px] px-4 text-light-text_secondary dark:text-white article-section flex flex-col gap-4">
       <div className="header px-2">
         <h2 className="text-6xl font-bold ">Articles.</h2>
         <div className="py-4">

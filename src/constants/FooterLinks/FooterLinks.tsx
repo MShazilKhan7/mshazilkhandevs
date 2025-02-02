@@ -20,7 +20,6 @@ const footerLinks = {
       url: "/legal/terms-and-conditions",
     },
   ],
-
   quick: [
     {
       name: "About",
