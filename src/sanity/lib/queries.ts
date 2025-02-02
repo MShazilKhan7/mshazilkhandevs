@@ -505,3 +505,20 @@ export const projectQuery = groq`*[_type == "project" && slug.current == $slug] 
     projectDetails,
     publishedAt,
 }[0]`;
+
+// ******** Categories Query *************
+export const categoriesQuery = groq`*[_type == "category"] | order(_createdAt desc){
+  _createdAt,
+  _updatedAt,
+  title,
+  slug,
+  description
+}`;
+
+export const categoryQuery = groq`*[_type == "category" && slug.current == $slug][0]{
+  _createdAt,
+  _updatedAt,
+  title,
+  slug,
+  description
+}`;
