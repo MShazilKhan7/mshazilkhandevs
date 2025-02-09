@@ -4,7 +4,7 @@ import React from "react";
 
 const Stack = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center pt-32">
       <div className="max-[800px]:w-full w-[740px] px-4 text-light-text_secondary dark:text-white flex flex-col gap-4">
         <div className="flex flex-col gap-4">
           <p className="text-6xl tracking-tight font-bold">Stack</p>

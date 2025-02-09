@@ -3,7 +3,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="text-light-text_secondary dark:text-dark-text_white flex flex-col items-center">
+    <div className="pt-32 text-light-text_secondary dark:text-dark-text_white flex flex-col items-center">
       <div className="w-80 md:w-[720px] py-4">
         <h3 className="font-semibold text-5xl tracking-tighter mb-2">
           Hey, I'm Shazil 👋 <br></br>I Develop Mobile Apps, Web Apps & Create
