@@ -55,6 +55,8 @@ export interface IOpenSourceData {
   title: string;
 }
 
+export type PillVariant = "outlined" | "hover-outlined" | "simple" | "text";
+
 export interface IOpenSource {
   path?: string;
   preview?: IOpenSourceData;

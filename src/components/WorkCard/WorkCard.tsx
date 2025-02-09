@@ -26,7 +26,7 @@ const WorkCard = ({ project, path }: WorkCardProps) => {
       onClick={onClickHandler}
       className="w-full article-card transition-all duration-200 cursor-pointer flex gap-4 hover:bg-[#F5F8FC] dark:hover:bg-dark-secondary_two rounded-md px-4 py-4 hover:shadow-md"
     >
-      <div className="image-div max-[800px]:w-[30vw] max-[800px]:h-[25vw] w-[200px] h-[150px] rounded-md flex items-center">
+      <div className="image-div max-[800px]:w-[30vw] max-[800px]:h-[25vw] w-[200px] h-[150px] rounded-md flex items-center min-w-[130px] min-h-[130px]">
         {_ref && (
           <Image
             src={`${urlFor(_ref)}`}
@@ -44,7 +44,7 @@ const WorkCard = ({ project, path }: WorkCardProps) => {
           <h2 className="font-bold text-light-text_primary">{title}</h2>
         </div>
         <div className="pill-section">
-          <WorkTags tags={tags} />
+          <WorkTags isCard tags={tags} />
         </div>
       </div>
     </div>

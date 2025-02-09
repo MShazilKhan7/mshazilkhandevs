@@ -30,20 +30,20 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
   }, [counter]);
 
   return (
-    <div className="carousel max-w-full md:h-[74vh] ">
-      <div className="carousel-images w-full h-full overflow-hidden flex  rounded-md">
+    <div className="carousel max-w-full h-[40vh] md:h-[70vh] w-full">
+      <div className="carousel-images w-full h-full overflow-hidden flex rounded-md">
         {visuals?.map((slide, index) => {
           const {
             alt,
             asset: { _ref = "" },
             dimensions, // Extract dimensions here
           } = slide;
-
+          console.log("img dets:", alt, _ref);
           // Fallback values for width and height
-          const width = dimensions?.width || 500;
-          const height = dimensions?.height || 500;
+          let width = dimensions?.width || 500;
+          let height = dimensions?.height || 500;
           return (
-            <div className="slide w-full h-full rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
+            <div className="slide w-full h-full overflow-hidden rounded-md flex-shrink-0 transition-all duration-500 ease-in-out">
               {_ref != "" && (
                 <Image
                   key={index}
