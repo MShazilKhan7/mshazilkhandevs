@@ -41,11 +41,8 @@ export function CategoriesBar({ variant }: CategoriesBarProps) {
 
   const categoriesList = useMemo(
     () =>
-      state.categories.map((category) => (
-        <h3
-          className="text-black dark:text-white cursor-pointer"
-          key={category._id}
-        >
+      state.categories.map((category, index) => (
+        <h3 className="text-black dark:text-white cursor-pointer" key={index}>
           {category.title}
         </h3>
       )),
