@@ -31,7 +31,7 @@ const config = {
         },
         light: {
           primary: "#FFFFFF",
-          secondary: "#F2Fj2F3",
+          secondary: "#F2F2F3",
           text_primary: "#00000",
           text_secondary: "#0E1217",
           gray_05: "#f9fafb",
