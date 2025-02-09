@@ -14,6 +14,8 @@ const VisualContent = async () => {
     },
   });
 
+  console.log("posts...", posts);
+
   return (
     <div>
       <ContentSection posts={posts} />

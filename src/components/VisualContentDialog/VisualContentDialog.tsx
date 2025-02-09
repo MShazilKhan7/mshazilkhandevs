@@ -27,9 +27,9 @@ const VisualContentDialog = ({
       <Dialog open={open} onOpenChange={onOpenChange}>
         <DialogContent
           style={{
-            width: "80%",
             backgroundColor: "white",
           }}
+          className="w-[90%] md:w-[70%]"
         >
           <DialogHeader>
             <DialogTitle className="text-center text-base text-black md:text-2xl font-semibold">

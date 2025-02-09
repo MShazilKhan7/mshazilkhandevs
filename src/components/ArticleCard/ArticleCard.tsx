@@ -34,7 +34,7 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
       onClick={onClickHandler}
       className="w-full article-card transition-all duration-200 cursor-pointer flex gap-4 hover:bg-[#F5F8FC] dark:hover:bg-dark-secondary_two rounded-md px-4 py-4 hover:shadow-md"
     >
-      <div className="image-div max-[800px]:w-[30vw] max-[800px]:h-[25vw] w-[200px] h-[150px] rounded-md flex items-center">
+      <div className="image-div max-[800px]:w-[30vw] max-[800px]:h-[25vw] w-[200px] h-[150px] rounded-md flex items-center min-w-[130px] min-h-[130px]">
         {_ref && (
           <Image
             src={`${urlFor(_ref)}`}
@@ -52,7 +52,7 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
       </div>
       <div className="right-container max-[800px]:w-[58vw] w-[calc(100%-200px)] flex flex-col gap-4 max-[800px]:justify-start justify-between">
         <div className="top-section">
-          <h2 className="font-bold text-light-text_primary">
+          <h2 className="font-bold text-light-text_primary text-ellipsis break-words line-clamp-2">
             {title && title}
           </h2>
           <p className="text-sm text-dark-text_primary">
@@ -60,7 +60,7 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
           </p>
         </div>
         <div className="pill-section">
-          <ArticleTags tags={tags} />
+          <ArticleTags isCard={true} tags={tags} />
         </div>
       </div>
     </div>

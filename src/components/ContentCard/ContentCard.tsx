@@ -19,9 +19,15 @@ import Image from "next/image";
 
 interface ContentCardProps extends IContentCardDetails {
   onOpenChange: () => void;
+  onOpenVideoChange: () => void;
 }
 
-const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
+const ContentCard = ({
+  onOpenChange,
+  post,
+  buttonText,
+  onOpenVideoChange,
+}: ContentCardProps) => {
   const [visible, setVisible] = useState(false);
   const { title, thumbnail, tags } = post;
   return (
@@ -57,6 +63,7 @@ const ContentCard = ({ onOpenChange, post, buttonText }: ContentCardProps) => {
                   <FaYoutube
                     onClick={(event: any) => {
                       event.stopPropagation();
+                      onOpenVideoChange();
                     }}
                     color="#F70000"
                     size={28}

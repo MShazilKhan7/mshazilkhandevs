@@ -81,7 +81,7 @@ export default function RootLayout({
                 </div>
             </div> */}
               {/* altternative universal width setting  */}
-              <div className="min-h-screen pt-32">{children}</div>
+              <div className="min-h-screen overflow-x-hidden">{children}</div>
               <Footer />
             </div>
           </div>

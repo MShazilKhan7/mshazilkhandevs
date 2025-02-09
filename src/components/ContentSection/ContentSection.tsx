@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import ContentCard from "../ContentCard/ContentCard";
 import VisualContentDialog from "../VisualContentDialog/VisualContentDialog";
 import { IContentPost } from "@/types/interfaces";
+import VideoDialog from "../VideoDialog/VideoDialog";
 
 interface ContentSectionProps {
   posts: IContentPost[];
@@ -11,6 +12,10 @@ interface ContentSectionProps {
 function ContentSection({ posts }: ContentSectionProps) {
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
   const [post, setPost] = useState<any>();
+  const [videoDialogOpen, setVideoDialogOpen] = useState<boolean>(false);
+  const onOpenVideoChange = () => {
+    setVideoDialogOpen(!videoDialogOpen);
+  };
 
   const onOpenChange = () => {
     setDialogOpen(!dialogOpen);
@@ -33,6 +38,9 @@ function ContentSection({ posts }: ContentSectionProps) {
                 setPost(post);
                 onOpenChange();
               }}
+              onOpenVideoChange={() => {
+                onOpenVideoChange();
+              }}
             />
           );
         })}
@@ -40,6 +48,11 @@ function ContentSection({ posts }: ContentSectionProps) {
           open={dialogOpen}
           onOpenChange={onOpenChange}
           post={post}
+        />
+        <VideoDialog
+          open={videoDialogOpen}
+          videoId={`egzqP3llrP4`}
+          onOpenChange={onOpenVideoChange}
         />
       </div>
     </div>

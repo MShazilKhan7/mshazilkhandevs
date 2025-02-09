@@ -31,7 +31,7 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
   const router = useRouter();
   const onClickHandler = () => {
     router.back();
-  };  
+  };
   return (
     <div className="article-section pt-20 px-4 flex flex-col gap-4">
       <AnimatedHeading heading="All Articles" onClickHandler={onClickHandler} />
@@ -55,7 +55,7 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
           )}
         </div>
         <div className="tags flex flex-wrap justify-center gap-6 px-2 md:px-4 py-4">
-          <ArticleTags tags={tags} />
+          <ArticleTags tags={tags} isCard={false} />
         </div>
       </div>
     </div>

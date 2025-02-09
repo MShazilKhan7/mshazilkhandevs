@@ -6,18 +6,9 @@ import { LuExternalLink } from "react-icons/lu";
 import VideoDialog from "../VideoDialog/VideoDialog";
 import Pill from "../Pills/Pill";
 const FeaturedWorkCard = () => {
-  const [dialogOpen, setDialogOpen] = useState<boolean>(false);
-
-  const onOpenChange = () => {
-    setDialogOpen(!dialogOpen);
-  };
-
   return (
     <div className="card w-80 text-light-text_secondary dark:text-dark-text_white">
-      <div
-        onClick={onOpenChange}
-        className="image-container w-80 h-52 rounded-lg cursor-pointer"
-      >
+      <div className="image-container w-80 h-52 rounded-lg cursor-pointer">
         <img
           src="/sample.png"
           className="w-full h-full object-cover rounded-lg"
@@ -37,7 +28,6 @@ const FeaturedWorkCard = () => {
           </div>
         </div>
       </div>
-      <VideoDialog open={dialogOpen} onOpenChange={onOpenChange} />
     </div>
   );
 };
