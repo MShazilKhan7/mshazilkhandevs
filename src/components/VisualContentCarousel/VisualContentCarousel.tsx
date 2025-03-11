@@ -38,7 +38,6 @@ const VisualContentCarousel = ({ visuals }: VisualContentCarouselProps) => {
             asset: { _ref = "" },
             dimensions, // Extract dimensions here
           } = slide;
-          console.log("img dets:", alt, _ref);
           // Fallback values for width and height
           let width = dimensions?.width || 500;
           let height = dimensions?.height || 500;
