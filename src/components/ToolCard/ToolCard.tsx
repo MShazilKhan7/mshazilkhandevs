@@ -5,11 +5,19 @@ interface ToolCardProps {
   title: string;
   imageUrl: string;
   description: string;
+  className?: string;
 }
 
-const ToolCard = ({ title, description, imageUrl }: ToolCardProps) => {
+const ToolCard = ({
+  title,
+  description,
+  imageUrl,
+  className,
+}: ToolCardProps) => {
   return (
-    <div className="p-2 rounded-sm flex gap-4 items-center w-[320px] dark:hover:bg-dark-secondary_two hover:bg-gray-50 hover:shadow-sm">
+    <div
+      className={`p-2 rounded-sm flex gap-4 items-center w-[320px] dark:hover:bg-dark-secondary_two hover:bg-gray-50 hover:shadow-sm ${className} `}
+    >
       <div className="image rounded-sm border border-light-gray_50 dark:border-dark-secondary_three p-1 w-[35px] h-[35px]">
         <Image
           alt="tool image"

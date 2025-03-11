@@ -32,7 +32,7 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
   return (
     <div
       onClick={onClickHandler}
-      className="w-full article-card transition-all duration-200 cursor-pointer flex gap-4 hover:bg-[#F5F8FC] dark:hover:bg-dark-secondary_two rounded-md px-4 py-4 hover:shadow-md"
+      className="w-full mt-1 article-card transition-all duration-200 cursor-pointer flex gap-4 hover:bg-[#F5F8FC] dark:hover:bg-dark-secondary_two rounded-md px-4 py-4 hover:shadow-md"
     >
       <div className="image-div max-[800px]:w-[30vw] max-[800px]:h-[25vw] w-[200px] h-[150px] rounded-md flex items-center min-w-[130px] min-h-[130px]">
         {_ref && (

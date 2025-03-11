@@ -16,7 +16,7 @@ function WorkTags({ tags, isCard, variant }: WorkTagsProps) {
   );
   return (
     <div
-      className={`w-full flex gap-2 ${isCard ? "flex-nowrap overflow-hidden" : "flex-wrap"} ${isCalculated && isCard ? "visible" : !isCard ? "visible" : "invisible"} `}
+      className={`w-full pr-4 items-center flex gap-2 ${isCard ? "flex-nowrap overflow-hidden" : "flex-wrap"} ${isCalculated && isCard ? "visible" : !isCard ? "visible" : "invisible"} `}
       ref={tagsContainerRef}
     >
       {tags?.map(({ title }, index) => {
@@ -33,7 +33,7 @@ function WorkTags({ tags, isCard, variant }: WorkTagsProps) {
         return null;
       })}
       {overflowCount > 0 && isCard && (
-        <p className="text-dark-secondary_three dark:text-white mr-3">{`+${overflowCount}`}</p>
+        <p className="text-dark-secondary_three text-[12px] dark:text-light-secondary">{`+${overflowCount}`}</p>
       )}
     </div>
   );
