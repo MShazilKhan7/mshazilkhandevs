@@ -75,11 +75,6 @@ export default function RootLayout({
                   <GiHamburgerMenu onClick={ToggleSidebar} size={32} />
                 </div>
               </div>
-              {/* <div className="min-h-screen flex justify-center bg-red-500">
-                <div className="max-[800px]:w-full w-[740px] px-4">
-                  {children}
-                </div>
-            </div> */}
               {/* altternative universal width setting  */}
               <div className="min-h-screen overflow-x-hidden">{children}</div>
               <Footer />
