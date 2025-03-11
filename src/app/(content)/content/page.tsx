@@ -9,13 +9,7 @@ import { IContentPost } from "@/types/interfaces";
 const VisualContent = async () => {
   const posts = await fetchDataFromSanity<IContentPost[]>({
     query: contentPosts,
-    fetchOptions: {
-      cache: "no-store",
-    },
   });
-
-  console.log("posts...", posts);
-
   return (
     <div>
       <ContentSection posts={posts} />

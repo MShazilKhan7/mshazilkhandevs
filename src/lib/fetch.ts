@@ -15,7 +15,8 @@ interface Props {
 }
 
 const DEFAULT_FETCH_OPTIONS = {
-  cache: "no-store",
+  cache: "force-cache", // Cache data during build,
+  next: { revalidate: 60 }, // Match ISR setting
 } as const;
 
 // the QueryResponse here suggests that the function will return the response of this generic type
@@ -29,6 +30,6 @@ export const fetchDataFromSanity = async <QueryResponse>({
     const data = await client.fetch(query, params, fetchOptions);
     return data;
   } catch (error) {
-    throw new Error("Failed to fetch");
+    throw new Error(`Failed to fetch the data ${error}`);
   }
 };
