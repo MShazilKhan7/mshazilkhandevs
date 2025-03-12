@@ -55,17 +55,17 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Linkedin",
-    path: "/",
+    path: "https://www.linkedin.com/in/muhammadshazilkhan/",
     icon: <CiLinkedin />,
   },
   {
     title: "Instagram",
-    path: "/",
+    path: "https://www.instagram.com/shazil._.khan/",
     icon: <FaInstagram />,
   },
   {
     title: "Medium",
-    path: "/",
+    path: "https://medium.com/@shazilkhannew/",
     icon: <FaMedium />,
   },
 ];
