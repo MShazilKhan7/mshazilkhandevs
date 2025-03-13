@@ -1,14 +1,12 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "../ui/button";
+import React from "react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { LuExternalLink } from "react-icons/lu";
-import VideoDialog from "../VideoDialog/VideoDialog";
 import Pill from "../Pills/Pill";
 const FeaturedWorkCard = () => {
   return (
-    <div className="card w-80 text-light-text_secondary dark:text-dark-text_white">
-      <div className="image-container w-80 h-52 rounded-lg cursor-pointer">
+    <div className="card w-full text-light-text_secondary dark:text-dark-text_white">
+      <div className="image-container h-52 rounded-lg cursor-pointer">
         <img
           src="/sample.png"
           className="w-full h-full object-cover rounded-lg"
