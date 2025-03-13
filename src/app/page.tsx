@@ -16,10 +16,14 @@ const Home = () => {
         </h3>
         <div className="md:w-3/4">
           <h3 className="mt-2 tracking-tight">
-            As a Computer Science enthusisat, Currently associated with a
-            Startup and contributing in mutiple Products built with Reactjs,
-            Redux, Typescript. I like teaching and create visual content to help
-            students learn CS topics in an interactive way.
+            A Computer Science enthusiast and developer
+            specializing in Software Development. <br></br>Currently, I’m
+            contributing to multiple products at a startup, working with
+            ReactJS, Redux, and TypeScript to build impactful solutions. Beyond
+            coding, I’m passionate about teaching and creating visual,
+            interactive content to help students grasp complex CS concepts in an
+            engaging way. <br></br> I am deepening my understanding of Machine
+            Learning these days.
           </h3>
         </div>
         <FeaturedWork />
