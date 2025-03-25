@@ -11,14 +11,14 @@ interface ProjectHeader {
 function ProjectHeader({ project }: ProjectHeader) {
   const router = useRouter();
   const onClickHandler = () => {
-    router.back();
+    router.push("/projects");
   };
   return (
     <div className="max-[800px]:w-full w-[740px] pt-20 px-4 flex flex-col gap-4 text-light-text_primary dark:text-white">
       <AnimatedHeading heading="All Projects" onClickHandler={onClickHandler} />
       <div className="project-title pt-16 pb-6">
         <h1 className="text-4xl font-semibold tracking-tighter ">
-          {project?.title}
+          {project?.title || "HELLO"}
         </h1>
       </div>
       <div className="tags">

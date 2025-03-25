@@ -116,3 +116,45 @@ export interface ILegal {
   meta_description: string;
   slug: string;
 }
+// Optional: Define a SanityImage type for reusable image fields
+interface SanityImage {
+  _type: "image";
+  asset: {
+    _ref: string; // Reference to the image asset
+    _type: "reference";
+  };
+  // Optional: Add if you use hotspot/crop or alt text
+  crop?: {
+    top: number;
+    bottom: number;
+    left: number;
+    right: number;
+  };
+  hotspot?: {
+    x: number;
+    y: number;
+    height: number;
+    width: number;
+  };
+}
+
+// Define the ThemedImages interface based on your earlier schema
+interface themeImages {
+  dark?: SanityImage;
+  light?: SanityImage;
+}
+
+// Main Project interface
+export interface IProject {
+  _createdAt: string; // ISO date string, e.g., "2023-01-01T12:00:00Z"
+  _updatedAt: string; // ISO date string
+  title: string;
+  slug: {
+    current: string;
+  };
+  thumbnail: SanityImage;
+  isFeatured: boolean;
+  themeImages: themeImages;
+  tags: Tag[]; // Array of tags
+  publishedAt: string; // ISO date string
+}

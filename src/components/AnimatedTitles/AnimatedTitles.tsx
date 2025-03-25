@@ -23,7 +23,7 @@ const AnimatedTitles = () => {
         }
       }}
     >
-      {counter % 2 === 0 ? "Frontend Engineer" : "Top 3% Globally"}
+      {counter % 2 === 0 ? "Software Engineer" : "Full Stack Developer"}
     </motion.div>
   );
 };

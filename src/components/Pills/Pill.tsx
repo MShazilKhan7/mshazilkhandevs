@@ -20,9 +20,9 @@ const Pill = ({
     <div
       onClick={onClickHandler}
       style={{ backgroundColor: color ? color : "" }}
-      className={`pill ${className} ${getPillVariantStyles(
+      className={`pill ${getPillVariantStyles(
         variant
-      )} w-fit border border-1 whitespace-nowrap dark:border-[#383D47] flex items-center rounded-md py-1 text-sm px-4 text-[#66696B] dark:text-white`}
+      )} w-fit border border-1 whitespace-nowrap dark:border-[#383D47] flex items-center rounded-md py-1 text-sm px-4 text-[#66696B] dark:text-white ${className}`}
     >
       {text}
     </div>

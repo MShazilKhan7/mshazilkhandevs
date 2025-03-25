@@ -7,9 +7,10 @@ interface WorkTagsProps {
   tags: Tag[];
   isCard: boolean;
   variant?: PillVariant;
+  className?: string;
 }
 
-function WorkTags({ tags, isCard, variant }: WorkTagsProps) {
+function WorkTags({ tags, isCard, variant, className }: WorkTagsProps) {
   const { isCalculated, overflowCount, tagsContainerRef } = useOverflow(
     tags,
     isCard
@@ -27,6 +28,7 @@ function WorkTags({ tags, isCard, variant }: WorkTagsProps) {
               key={index}
               text={`${title}`}
               variant={variant || "hover-outlined"}
+              className={className}
             />
           );
         }

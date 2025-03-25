@@ -490,20 +490,35 @@ export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc)
     title,
     slug,
     thumbnail,
+    isFeatured,
+    themeImages,
     "tags": tags[]-> {title,slug},
     publishedAt,
   }`;
 
+// featured projects
+export const featuredProjectsQuery = groq`*[_type == "project" && isFeatured] {
+  _createdAt,
+  _updatedAt,
+  title,
+  slug,
+  thumbnail,
+  isFeatured,
+  themeImages,
+  "tags": tags[]-> {title, slug},
+  publishedAt
+}`;
+
 export const projectQuery = groq`*[_type == "project" && slug.current == $slug] | {
-    _createdAt,
-    _updatedAt,
-    title,
-    slug,
-    thumbnail,
-    contribution,
-    "tags": tags[]-> {title,slug},
-    projectDetails,
-    publishedAt,
+   _createdAt,
+  _updatedAt,
+  title,
+  slug,
+  thumbnail,
+  isFeatured,
+  themedImages,
+  "tags": tags[]-> {title,slug},
+  publishedAt,
 }[0]`;
 
 // ******** Categories Query *************

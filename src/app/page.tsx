@@ -16,14 +16,8 @@ const Home = () => {
         </h3>
         <div className="md:w-3/4">
           <h3 className="mt-2 tracking-tight">
-            A Computer Science enthusiast and developer
-            specializing in Software Development. <br></br>Currently, I’m
-            contributing to multiple products at a startup, working with
-            ReactJS, Redux, and TypeScript to build impactful solutions. Beyond
-            coding, I’m passionate about teaching and creating visual,
-            interactive content to help students grasp complex CS concepts in an
-            engaging way. <br></br> I am deepening my understanding of Machine
-            Learning these days.
+            Computer Science Undergraduate who can solve your problems with
+            code, ML, and data.
           </h3>
         </div>
         <FeaturedWork />
@@ -33,5 +27,13 @@ const Home = () => {
     </div>
   );
 };
-
 export default Home;
+
+// A Computer Science enthusiast and developer
+// specializing in Software Development. <br></br>Currently, I’m
+// contributing to multiple products at a startup, working with
+// ReactJS, Redux, and TypeScript to build impactful solutions. Beyond
+// coding, I’m passionate about teaching and creating visual,
+// interactive content to help students grasp complex CS concepts in an
+// engaging way. <br></br> I am deepening my understanding of Machine
+// Learning these days.
