@@ -15,7 +15,7 @@ interface Props {
 }
 
 const DEFAULT_FETCH_OPTIONS = {
-  cache: "force-cache", // Cache data during build,
+  // cache: "force-cache", // Cache data during build,
   next: { revalidate: 60 }, // Match ISR setting
 } as const;
 

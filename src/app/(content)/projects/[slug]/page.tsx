@@ -15,7 +15,7 @@ interface Props {
 const Project = async ({ params }: Props) => {
   const project = await fetchDataFromSanity<SanityDocument>({
     query: projectQuery,
-    params,
+    params: { slug: params.slug },
   });
 
   return (
