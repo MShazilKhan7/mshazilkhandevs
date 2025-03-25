@@ -9,7 +9,7 @@ import { FaMedium } from "react-icons/fa6";
 import { FaPen } from "react-icons/fa6";
 import { SiDocsdotrs } from "react-icons/si";
 import { GiSpanner } from "react-icons/gi";
-
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 export interface Navigation {
   title: string;
   path: string;
@@ -57,6 +57,11 @@ export const navigationMenus: Navigation[] = [
     title: "Linkedin",
     path: "https://www.linkedin.com/in/muhammadshazilkhan/",
     icon: <CiLinkedin />,
+  },
+  {
+    title: "Github",
+    path: "https://github.com/MShazilKhan7",
+    icon: <GitHubLogoIcon />,
   },
   {
     title: "Instagram",

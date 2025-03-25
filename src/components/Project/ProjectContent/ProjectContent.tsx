@@ -17,7 +17,7 @@ function ProjectContent({ project }: ProjectContentProps) {
                 alt={""}
                 src={`${urlFor(project?.image?.asset?._ref)}`}
                 layout="responsive"
-                className="mb-3"
+                className="mb-1"
                 width={700}
                 height={500}
                 blurDataURL="/loading.gif"
