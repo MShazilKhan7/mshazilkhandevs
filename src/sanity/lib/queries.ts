@@ -516,9 +516,10 @@ export const projectQuery = groq`*[_type == "project" && slug.current == $slug] 
   slug,
   thumbnail,
   isFeatured,
-  themedImages,
+  themeImages,
   "tags": tags[]-> {title,slug},
   publishedAt,
+  projectDetails
 }[0]`;
 
 // ******** Categories Query *************
