@@ -35,21 +35,7 @@ export const postType = defineType({
       type: "reference",
       to: { type: "author" },
     }),
-    defineField({
-      name: "mainImage",
-      title: "Main image",
-      type: "image",
-      options: {
-        hotspot: true,
-      },
-      fields: [
-        {
-          name: "alt",
-          type: "string",
-          title: "Alternative Text",
-        },
-      ],
-    }),
+ 
     defineField({
       name: "categories",
       title: "Categories",
