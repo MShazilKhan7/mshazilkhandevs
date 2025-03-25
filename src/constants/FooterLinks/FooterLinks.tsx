@@ -33,17 +33,17 @@ const footerLinks = {
   socialMedia: [
     {
       name: "Linkedin",
-      url: "",
+      url: "https://www.linkedin.com/in/muhammadshazilkhan/",
       icons: <AiFillLinkedin />,
     },
     {
       name: "GitHub",
-      url: "",
+      url: "https://github.com/MShazilKhan7",
       icons: <AiFillGithub />,
     },
     {
       name: "Medium",
-      url: "",
+      url: "https://medium.com/@shazilkhannew",
       icons: <AiFillMediumSquare />,
     },
   ],

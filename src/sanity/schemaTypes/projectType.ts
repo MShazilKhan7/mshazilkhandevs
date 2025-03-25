@@ -90,5 +90,24 @@ export const projecType = defineType({
         },
       ],
     },
+    {
+      name: "links",
+      title: "Links",
+      type: "object",
+      fields: [
+        {
+          name: "github",
+          title: "GitHub URL",
+          type: "url",
+          validation: (Rule) => Rule.uri({ scheme: ["http", "https"] }),
+        },
+        {
+          name: "live",
+          title: "Live URL",
+          type: "url",
+          validation: (Rule) => Rule.uri({ scheme: ["http", "https"] }),
+        },
+      ],
+    },
   ],
 });

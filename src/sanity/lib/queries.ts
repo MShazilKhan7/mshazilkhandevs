@@ -516,6 +516,7 @@ export const projectQuery = groq`*[_type == "project" && slug.current == $slug] 
   slug,
   thumbnail,
   isFeatured,
+  contribution,
   themeImages,
   "tags": tags[]-> {title,slug},
   publishedAt,

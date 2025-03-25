@@ -54,7 +54,7 @@ export default function RootLayout({
                 sidebarOpen ? "translate-x-0" : "-translate-x-full"
               }`}
             >
-              <Sidebar />
+              <Sidebar closeSidebar={setSidebarOpen} />
             </div>
             <div
               className={`${

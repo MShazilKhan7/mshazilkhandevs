@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { Navigation } from "@/constants/navigationConfig";
 import Link from "next/link";
 interface SidebarItemProps {
@@ -7,6 +7,7 @@ interface SidebarItemProps {
   isFocused: boolean;
   setActiveItem: React.Dispatch<React.SetStateAction<number>>;
   itemNumber: number;
+  closeSidebar: Dispatch<SetStateAction<boolean>>;
 }
 
 const SidebarItem = ({
@@ -14,9 +15,16 @@ const SidebarItem = ({
   isFocused,
   setActiveItem,
   itemNumber,
+  closeSidebar,
 }: SidebarItemProps) => {
   return (
-    <Link shallow={true} href={menu?.path ? menu.path : "/"}>
+    <Link
+      shallow={true}
+      href={menu?.path ? menu.path : "/"}
+      onClick={() => {
+        closeSidebar(false);
+      }}
+    >
       <div
         style={
           isFocused
