@@ -12,9 +12,17 @@ interface ContentSectionProps {
 function ContentSection({ posts }: ContentSectionProps) {
   const [dialogOpen, setDialogOpen] = useState<boolean>(false);
   const [post, setPost] = useState<any>();
+  const [selectedVideoId, setSelectedVideoId] = useState<string | null>(null);
   const [videoDialogOpen, setVideoDialogOpen] = useState<boolean>(false);
-  const onOpenVideoChange = () => {
-    setVideoDialogOpen(!videoDialogOpen);
+
+  const onOpenVideoChange = (videoId: string) => {
+    setSelectedVideoId(videoId); // Set the videoId for the dialog
+    setVideoDialogOpen(true); // Open the video dialog
+  };
+
+  const onVideoDialogClose = () => {
+    setVideoDialogOpen(false);
+    setSelectedVideoId(null); // Clear videoId when closing
   };
 
   const onOpenChange = () => {
@@ -39,7 +47,7 @@ function ContentSection({ posts }: ContentSectionProps) {
                 onOpenChange();
               }}
               onOpenVideoChange={() => {
-                onOpenVideoChange();
+                onOpenVideoChange(post.videoId); // Pass the videoId directly
               }}
             />
           );
@@ -49,11 +57,13 @@ function ContentSection({ posts }: ContentSectionProps) {
           onOpenChange={onOpenChange}
           post={post}
         />
-        <VideoDialog
-          open={videoDialogOpen}
-          videoId={post?.videoId}
-          onOpenChange={onOpenVideoChange}
-        />
+        {selectedVideoId && (
+          <VideoDialog
+            open={videoDialogOpen}
+            videoId={selectedVideoId}
+            onOpenChange={onVideoDialogClose}
+          />
+        )}
       </div>
     </div>
   );
