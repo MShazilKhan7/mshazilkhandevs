@@ -71,9 +71,10 @@ export const galleryType = defineType({
       },
     }),
     defineField({
-      name: "youtube",
-      title: "Youtube Video",
-      type: "url",
+      name: "videoId",
+      title: "YouTube Video ID",
+      type: "string",
+      description: "Paste the YouTube video ID here (e.g., egzqP3llrP4)",
     }),
     defineField({
       name: "series",

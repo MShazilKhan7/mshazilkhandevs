@@ -452,7 +452,7 @@ export const contentPosts = groq`
     publishedAt,
     title,
     slug,
-    youtube,
+    videoId,
     thumbnail,
     "tags": tags[]-> {title, slug},
     images[]{

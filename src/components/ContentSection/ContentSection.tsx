@@ -51,7 +51,7 @@ function ContentSection({ posts }: ContentSectionProps) {
         />
         <VideoDialog
           open={videoDialogOpen}
-          videoId={`egzqP3llrP4`}
+          videoId={post?.videoId}
           onOpenChange={onOpenVideoChange}
         />
       </div>

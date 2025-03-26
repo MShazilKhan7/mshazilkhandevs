@@ -26,12 +26,12 @@ const FeaturedWorkCard = ({ project }: FeaturedWorkCardProps) => {
     >
       <div className="image-container h-52 rounded-lg cursor-pointer">
         <Image
-          src={`${urlFor(theme == "dark" ? project.themeImages?.dark?.asset._ref : project.themeImages?.light?.asset._ref)}`}
+          src={`${urlFor(theme === "dark" ? project.themeImages?.dark?.asset._ref : project.themeImages?.light?.asset._ref)}`}
           alt={""}
           width={200}
           height={150}
           quality={70}
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full  object-cover rounded-lg"
           priority={true}
         />
       </div>

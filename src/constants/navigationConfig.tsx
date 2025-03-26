@@ -34,7 +34,7 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Stack",
-    path: "/Stack",
+    path: "/Stack/",
     icon: <GiSpanner />,
   },
   {

@@ -103,6 +103,7 @@ export interface IContentPost {
   title: string;
   slug: string;
   tags: Tag[];
+  videoId: string;
   thumbnail: any;
   images: any[];
 }

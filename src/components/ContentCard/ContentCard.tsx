@@ -28,18 +28,17 @@ const ContentCard = ({
   buttonText,
   onOpenVideoChange,
 }: ContentCardProps) => {
-  const [visible, setVisible] = useState(false);
-  const { title, thumbnail, tags } = post;
+  const { title, thumbnail, tags, videoId } = post;
   return (
     <>
       <div
         className="w-full cursor-pointer flex flex-col justify-between border border-light-gray_70 hover:border-light-gray_80 dark:border bg-light-sky_10 dark:border-[#333841] dark:bg-[#1C1F26] dark:hover:border-[#454b56] md:w-[300px] rounded-2xl px-3 py-3 transition-all duration-75 hover:shadow-sm"
-        onMouseOver={() => {
-          setVisible(true);
-        }}
-        onMouseOut={() => {
-          setVisible(false);
-        }}
+        // onMouseOver={() => {
+        //   setVisible(true);
+        // }}
+        // onMouseOut={() => {
+        //   setVisible(false);
+        // }}
         onClick={onOpenChange}
       >
         <div className="top-details transition-all ease-in-out duration-200 flex justify-between py-2 items-center h-[40px] ">
@@ -52,29 +51,30 @@ const ContentCard = ({
               height={32}
             />
           </div>
-          <div
-            className={`flex gap-2 items-center text-black ${
-              visible ? "md:visible" : "md:invisible"
-            }`}
-          >
-            <TooltipProvider>
-              <Tooltip delayDuration={0.5}>
-                <TooltipTrigger>
-                  <FaYoutube
-                    onClick={(event: any) => {
-                      event.stopPropagation();
-                      onOpenVideoChange();
-                    }}
-                    color="#F70000"
-                    size={28}
-                    className="hover:opacity-50"
-                  />
-                </TooltipTrigger>
-                <TooltipContent className="bg-white dark:bg-black" align="end">
-                  <p className="text-black dark:text-white">Watch video</p>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider>
+          <div className={`flex gap-2 items-center text-black`}>
+            {videoId && (
+              <TooltipProvider>
+                <Tooltip delayDuration={0.5}>
+                  <TooltipTrigger>
+                    <FaYoutube
+                      onClick={(event: any) => {
+                        event.stopPropagation();
+                        onOpenVideoChange();
+                      }}
+                      color="#F70000"
+                      size={28}
+                      className="hover:opacity-50"
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent
+                    className="bg-white dark:bg-black"
+                    align="end"
+                  >
+                    <p className="text-black dark:text-white">Watch video</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
 
             <RdButton text={buttonText || ""} />
             {/* <IoMdMore
