@@ -7,7 +7,7 @@ import ProfileTag from "../ProfileTag/ProfileTag";
 const Sidebar = ({
   closeSidebar,
 }: {
-  closeSidebar:Dispatch<SetStateAction<boolean>>;
+  closeSidebar: Dispatch<SetStateAction<boolean>>;
 }) => {
   const [activeItem, setActiveItem] = useState(0);
   return (

@@ -34,24 +34,13 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Stack",
-    path: "/Stack/",
+    path: "/stack/",
     icon: <GiSpanner />,
   },
   {
     title: "Content",
     path: "/content/",
     icon: <SiDocsdotrs />,
-  },
-
-  {
-    title: "Resume",
-    path: "/",
-    icon: <GrDocumentOutlook />,
-  },
-  {
-    title: "Book a Call",
-    path: "/",
-    icon: <IoPersonCircleOutline />,
   },
   {
     title: "Linkedin",
@@ -72,5 +61,10 @@ export const navigationMenus: Navigation[] = [
     title: "Medium",
     path: "https://medium.com/@shazilkhannew/",
     icon: <FaMedium />,
+  },
+  {
+    title: "Book a Call",
+    path: "/",
+    icon: <IoPersonCircleOutline />,
   },
 ];

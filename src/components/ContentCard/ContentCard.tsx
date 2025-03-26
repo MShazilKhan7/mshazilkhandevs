@@ -19,7 +19,7 @@ import Image from "next/image";
 
 interface ContentCardProps extends IContentCardDetails {
   onOpenChange: () => void;
-  onOpenVideoChange: () => void;
+  onOpenVideoChange: (videoId: string) => void;
 }
 
 const ContentCard = ({
@@ -29,6 +29,16 @@ const ContentCard = ({
   onOpenVideoChange,
 }: ContentCardProps) => {
   const { title, thumbnail, tags, videoId } = post;
+
+  // Handler to open video dialog and stop event propagation
+  const handleVideoClick = (e: React.MouseEvent) => {
+    e.stopPropagation(); // Prevent card's onClick from firing
+    if (videoId) {
+      onOpenVideoChange(videoId); // Pass videoId to parent
+    } else {
+      console.error("No videoId provided");
+    }
+  };
   return (
     <>
       <div
@@ -57,10 +67,7 @@ const ContentCard = ({
                 <Tooltip delayDuration={0.5}>
                   <TooltipTrigger>
                     <FaYoutube
-                      onClick={(event: any) => {
-                        event.stopPropagation();
-                        onOpenVideoChange();
-                      }}
+                      onClick={handleVideoClick}
                       color="#F70000"
                       size={28}
                       className="hover:opacity-50"
