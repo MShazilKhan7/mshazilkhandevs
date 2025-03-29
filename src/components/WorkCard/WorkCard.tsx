@@ -9,7 +9,6 @@ interface WorkCardProps {
   project?: any;
   path?: string;
 }
-
 const WorkCard = ({ project, path }: WorkCardProps) => {
   const router = useRouter();
   const {

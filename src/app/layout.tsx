@@ -5,10 +5,6 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import ProfileTag from "@/components/ProfileTag/ProfileTag";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import VideoDialog from "@/components/VideoDialog/VideoDialog";
-import { Button } from "@/components/ui/button";
-import FeaturedWorkCard from "@/components/FeaturedWorkCard/FeaturedWorkCard";
-import FeaturedWork from "@/components/FeaturedWork/FeaturedWork";
 import { ModeToggle } from "@/components/ui/mode-toggle";
 import Footer from "@/components/Footer/Footer";
 

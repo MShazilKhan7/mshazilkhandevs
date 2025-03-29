@@ -16,7 +16,7 @@ const Home = async () => {
     });
   return (
     <div className="pt-32 text-light-text_secondary dark:text-dark-text_white flex flex-col items-center">
-      <div className="w-[360px] md:w-[720px] py-4 flex flex-col gap-5">
+      <div className="w-full sm:w-[360px] md:w-[720px] px-4 py-4 flex flex-col gap-5">
         <Introduction />
         <FeaturedWork projects={featuredProjects} />
         <FYoutubeSec />
