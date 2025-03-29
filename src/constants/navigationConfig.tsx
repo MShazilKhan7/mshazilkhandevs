@@ -64,7 +64,7 @@ export const navigationMenus: Navigation[] = [
   },
   {
     title: "Book a Call",
-    path: "/",
+    path: "",
     icon: <IoPersonCircleOutline />,
   },
 ];

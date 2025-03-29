@@ -54,9 +54,9 @@ function ArticleHeader({ post }: ArticleHeaderProps) {
             />
           )}
         </div>
-        <div className="tags flex flex-wrap justify-center gap-6 px-2 md:px-4 py-4">
-          <ArticleTags tags={tags} isCard={false} />
-        </div>
+        {/* <div className="tags flex flex-wrap justify-center gap-6 px-2 md:px-4 py-4"> */}
+        <ArticleTags tags={tags} isCard={false} className="flex flex-row justify-center" />
+        {/* </div> */}
       </div>
     </div>
   );

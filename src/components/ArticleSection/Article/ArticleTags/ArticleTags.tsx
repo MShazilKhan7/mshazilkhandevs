@@ -13,9 +13,10 @@ interface ArticleTagsProps {
   }[];
   isCard: boolean;
   onTagClick?: () => void;
+  className?: string; // container styles
 }
 
-function ArticleTags({ tags, isCard }: ArticleTagsProps) {
+function ArticleTags({ tags, isCard, className }: ArticleTagsProps) {
   const onClickHandler = (event: React.MouseEvent) => {
     event.stopPropagation();
   };
@@ -27,7 +28,8 @@ function ArticleTags({ tags, isCard }: ArticleTagsProps) {
 
   return (
     <div
-      className={`w-full flex gap-2 ${isCard ? "flex-nowrap overflow-hidden" : "flex-wrap justify-center"} ${isCalculated && isCard ? "visible" : !isCard ? "visible" : "invisible"} `}
+      className={`w-full mt-2 ${className} gap-2 ${isCard ? "flex-nowrap overflow-hidden" : "flex-wrap "}  ${isCalculated && isCard ? "visible" : !isCard ? "visible" : "invisible"} 
+      `}
       ref={tagsContainerRef}
     >
       {tags?.map(({ title }, index) => {
