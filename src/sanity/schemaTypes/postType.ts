@@ -49,6 +49,21 @@ export const postType = defineType({
       of: [{ type: "reference", to: { type: "tags" } }],
     }),
     defineField({
+      name: "mainImage",
+      title: "Main image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: "alt",
+          type: "string",
+          title: "Alternative Text",
+        },
+      ],
+    }),
+    defineField({
       name: "publishedAt",
       title: "Published at",
       type: "datetime",
