@@ -9,6 +9,7 @@ import { urlFor } from "@/sanity/utils/sanity-utils";
 import WorkTags from "../WorkTags/WorkTags";
 import { useRouter } from "next/navigation";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 interface FeaturedWorkCardProps {
   project: IProject;
@@ -35,7 +36,7 @@ const FeaturedWorkCard = ({ project }: FeaturedWorkCardProps) => {
           priority={true}
         />
       </div>
-      <div className="details flex flex-col gap-2 py-2">
+      <div className="details flex flex-col gap-2 py-2" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between gap-8">
           <h3 className="project-title text-sm font-semibold">
             {project?.title}
@@ -50,8 +51,32 @@ const FeaturedWorkCard = ({ project }: FeaturedWorkCardProps) => {
             className="text-[10px]"
           />
           <div className="flex justify-between items-center gap-2 px-4">
-            <GitHubLogoIcon />
-            <LuExternalLink />
+            {project?.links?.github && (
+              <a
+                href={project.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
+              <GitHubLogoIcon className="cursor-pointer" />
+              </a>
+            )}
+            {project?.links?.live ? (
+              <a
+                href={project?.links?.live || "/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
+              >
+              <LuExternalLink className="cursor-pointer" />
+              </a>
+            ) : (
+              <LuExternalLink className="cursor-pointer" />
+            )}
           </div>
         </div>
       </div>

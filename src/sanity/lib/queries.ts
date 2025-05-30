@@ -494,6 +494,7 @@ export const projectsQuery = groq`*[_type == "project"] | order(_createdAt desc)
     themeImages,
     "tags": tags[]-> {title,slug},
     publishedAt,
+    links
   }`;
 
 // featured projects
@@ -506,7 +507,8 @@ export const featuredProjectsQuery = groq`*[_type == "project" && isFeatured] {
   isFeatured,
   themeImages,
   "tags": tags[]-> {title, slug},
-  publishedAt
+  publishedAt,
+  links
 }`;
 
 export const projectQuery = groq`*[_type == "project" && slug.current == $slug] | {
