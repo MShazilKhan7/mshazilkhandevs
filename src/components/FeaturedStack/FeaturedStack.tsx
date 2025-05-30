@@ -26,7 +26,7 @@ const FeaturedStack = () => {
         })}
         <div
           onClick={() => {
-            router.push("/Stack/");
+            router.push("/stack/");
           }}
           className="all-tools border dark:border-dark-secondary_two rounded-md bg-light-secondary dark:bg-dark-secondary_two text-center p-2 hover:border-light-gray_80 dark:hover:border-dark-secondary_three transition-all ease-in-out cursor-pointer mt-2"
         >

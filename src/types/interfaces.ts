@@ -158,4 +158,8 @@ export interface IProject {
   themeImages: themeImages;
   tags: Tag[]; // Array of tags
   publishedAt: string; // ISO date string
+  links: {
+    github: string;
+    live: string;
+  }
 }

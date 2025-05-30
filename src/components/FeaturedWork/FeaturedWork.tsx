@@ -19,6 +19,6 @@ const FeaturedWork = ({ projects }: FeaturedWorkProps) => {
       </div>
     </div>
   );
-};
+};  
 
 export default FeaturedWork;
