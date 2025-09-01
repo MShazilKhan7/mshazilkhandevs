@@ -22,8 +22,11 @@ const ArticleCard = ({ article, path }: ArticleCardProps) => {
     publishedAt = "",
     meta_description = "",
     estimatedReadingTime = 0,
-    mainImage: { alt = "", asset: { _ref = "" } = {} } = {},
+    mainImage,
   } = article || {};
+
+  const alt = mainImage?.alt ?? "";
+  const _ref = mainImage?.asset?._ref ?? "";
   const router = useRouter();
 
   const onClickHandler = () => {
