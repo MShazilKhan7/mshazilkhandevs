@@ -20,6 +20,14 @@ export const postType = defineType({
       },
     }),
     defineField({
+      name: "mainImage",
+      title: "Main Image",
+      type: "image",
+      options: {
+        hotspot: true,  
+      },
+    }),
+    defineField({
       name: "meta_description",
       title: "Meta Description",
       type: "text",
@@ -35,7 +43,7 @@ export const postType = defineType({
       type: "reference",
       to: { type: "author" },
     }),
- 
+
     defineField({
       name: "categories",
       title: "Categories",
